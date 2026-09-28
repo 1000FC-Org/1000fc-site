@@ -1,0 +1,113 @@
+.footer {
+  background: var(--green-900);
+  color: #fff;
+  padding: clamp(40px, 5vw, 68px) 0 26px;
+  margin-top: clamp(32px, 4vw, 60px);
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 2rem;
+}
+.chip {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.chip img {
+  height: 44px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+.brand p {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.95rem;
+  max-width: 34ch;
+}
+.col h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.col a:not(:global(.btn)) {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+.col a:not(:global(.btn)):hover {
+  color: var(--green);
+  padding-left: 3px;
+}
+.socials {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+.socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: grid;
+  place-items: center;
+  transition: 0.25s;
+  color: #fff;
+}
+.socials a:hover {
+  background: var(--green);
+  transform: translateY(-3px);
+}
+.socials svg {
+  width: 19px;
+  height: 19px;
+}
+.contact li {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.95rem;
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+.contact li svg {
+  flex-shrink: 0;
+  margin-top: 0.2em;
+}
+.cta {
+  margin-top: 1rem;
+  padding: 0.6rem 1.15rem;
+  font-size: 0.92rem;
+}
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 2.2rem;
+  padding-top: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}

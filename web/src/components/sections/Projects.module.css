@@ -1,0 +1,171 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+.title {
+  max-width: 18ch;
+}
+.intro {
+  max-width: 30ch;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.3s var(--ease-out),
+    box-shadow 0.3s;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--accent);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 2;
+}
+.card:hover::before {
+  opacity: 1;
+}
+.banner {
+  overflow: hidden;
+  background: var(--accent);
+  line-height: 0;
+}
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.body {
+  padding: 1rem 1.1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+.body p {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+.more {
+  margin-top: auto;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--accent-ink, var(--green-cta));
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.98rem;
+}
+.more svg {
+  transition: 0.25s;
+}
+.card:hover .more svg {
+  transform: translateX(4px);
+}
+
+.placeholder {
+  --accent: var(--green);
+  justify-content: center;
+  align-items: center;
+  background: rgba(105, 188, 69, 0.08);
+  border-style: dashed;
+}
+.placeholder .body {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.placeholderTitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--green-700);
+  font-size: 1.15rem;
+}
+
+/* Mapa da Mineração */
+.tool {
+  margin-top: 1.1rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.2rem;
+  align-items: center;
+  background: linear-gradient(120deg, #12331f, #1c4a2c);
+  color: #fff;
+  border-radius: var(--r);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+.toolIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.toolIcon svg {
+  width: 26px;
+  height: 26px;
+}
+.tool h3 {
+  font-size: 1.12rem;
+  margin-bottom: 0.15rem;
+}
+.tool p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9375rem;
+  max-width: 56ch;
+}
+.tag {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--green);
+  color: #0c2a10;
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tool {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+}
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

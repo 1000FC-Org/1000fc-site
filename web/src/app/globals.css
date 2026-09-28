@@ -1,0 +1,252 @@
+/*
+ * Estilos globais: tokens da marca, base tipográfica e as poucas classes
+ * utilitárias compartilhadas por várias seções (wrap, eyebrow, botões,
+ * reveal). O resto fica em CSS Modules ao lado de cada componente.
+ */
+
+/* ============ TOKENS ============ */
+:root {
+  --green: #69bc45;
+  --green-600: #54a831;
+  --green-700: #3e8c24;
+  --green-900: #183a12;
+  --green-cta: #2e7d1b; /* botões/links: passa contraste AA com branco */
+  --ink: #16261a;
+  --ink-soft: #3c4b40;
+  --paper: #ffffff;
+  --paper-2: #ffffff;
+  --white: #ffffff;
+  --gray: #b2b3b3;
+  --line: #e6e6e6;
+
+  --shadow-sm: 0 2px 8px rgba(24, 58, 18, 0.06);
+  --shadow: 0 18px 40px -18px rgba(24, 58, 18, 0.28);
+  --shadow-lg: 0 40px 80px -30px rgba(24, 58, 18, 0.35);
+  --r: 18px;
+  --r-lg: 26px;
+  --maxw: 1120px;
+
+  /*
+   * Fontes: substitutas gratuitas, auto-hospedadas via @fontsource.
+   * As oficiais do manual (Intervogue Soft Black / Mundial) são pagas:
+   * quando licenciadas, carregar com next/font/local e trocar aqui.
+   */
+  --font-display: "Fredoka Variable", "Fredoka", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk Variable", "Hanken Grotesk", system-ui, sans-serif;
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button {
+  font: inherit;
+}
+[id] {
+  scroll-margin-top: 100px;
+}
+
+/* ============ LAYOUT ============ */
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section {
+  padding: clamp(40px, 5.5vw, 80px) 0;
+  position: relative;
+}
+.muted {
+  color: var(--ink-soft);
+}
+.eyebrow {
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--green-cta);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--green);
+  border-radius: 2px;
+}
+.section-title {
+  font-size: clamp(1.5rem, 2.4vw, 2.05rem);
+  margin-top: 0.6rem;
+}
+
+/* ============ BUTTONS ============ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: 100px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition:
+    transform 0.25s var(--ease-out),
+    box-shadow 0.25s,
+    background 0.2s;
+  white-space: nowrap;
+}
+.btn svg {
+  width: 1.05em;
+  height: 1.05em;
+}
+.btn-primary {
+  background: var(--green-cta);
+  color: #fff;
+  box-shadow: 0 10px 24px -8px rgba(46, 125, 27, 0.55);
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px -10px rgba(46, 125, 27, 0.7);
+  background: #256916;
+}
+.btn-ghost {
+  background: #fff;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.btn-ghost:hover {
+  transform: translateY(-3px);
+  border-color: var(--green);
+  color: var(--green-700);
+  box-shadow: var(--shadow-sm);
+}
+.btn-light {
+  background: #fff;
+  color: var(--green-cta);
+}
+.btn-light:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ============ REVEAL (ver components/ui/Reveal.tsx) ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s var(--ease-out);
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+.stagger > * {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s var(--ease-out);
+}
+.stagger.in > * {
+  opacity: 1;
+  transform: none;
+}
+.stagger.in > *:nth-child(2) {
+  transition-delay: 0.08s;
+}
+.stagger.in > *:nth-child(3) {
+  transition-delay: 0.16s;
+}
+.stagger.in > *:nth-child(4) {
+  transition-delay: 0.24s;
+}
+.stagger.in > *:nth-child(5) {
+  transition-delay: 0.32s;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+  }
+  .reveal,
+  .stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ============ A11Y ============ */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.skip {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 200;
+  background: var(--green-cta);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7rem 1.1rem;
+  border-radius: 0 0 14px 14px;
+  transition: top 0.2s;
+}
+.skip:focus {
+  top: 0;
+}
+:focus-visible {
+  outline: 3px solid var(--green-cta);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+/* Superfícies escuras/verdes: foco em branco. */
+.on-dark :focus-visible {
+  outline-color: #fff;
+}

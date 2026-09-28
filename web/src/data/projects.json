@@ -1,0 +1,47 @@
+[
+  {
+    "id": "inspirati",
+    "name": "Inspirati",
+    "accent": "#FF4B69",
+    "accentInk": "#C81E3C",
+    "logo": { "src": "/images/logos/submarca-inspirati.png", "alt": "Inspirati", "width": 2189, "height": 929 },
+    "summary": "Práticas e metodologias científicas levadas até a sala de aula, despertando o interesse dos alunos da rede básica.",
+    "href": "#"
+  },
+  {
+    "id": "hialo-tech",
+    "name": "Hialo Tech",
+    "accent": "#EF4827",
+    "accentInk": "#B83A1E",
+    "logo": { "src": "/images/logos/submarca-hialotech.png", "alt": "Hialo Tech", "width": 2189, "height": 929 },
+    "summary": "Hialotecnia, o trabalho com o vidro e a educação socioambiental, com foco em reciclagem e meio ambiente.",
+    "href": "#"
+  },
+  {
+    "id": "experimentando",
+    "name": "Experimentando no DQ",
+    "accent": "#F9B233",
+    "accentInk": "#8A5A00",
+    "logo": { "src": "/images/logos/submarca-experimentando.png", "alt": "Experimentando Ciências no DQ", "width": 2189, "height": 929 },
+    "summary": "Experiências práticas dentro dos laboratórios da UFMG, com pesquisadores e tecnologia de ponta.",
+    "href": "#"
+  },
+  {
+    "id": "pelo-mundo",
+    "name": "Pelo Mundo",
+    "accent": "#02A896",
+    "accentInk": "#0B7A6E",
+    "logo": { "src": "/images/logos/submarca-pelomundo.png", "alt": "1000 FC Pelo Mundo", "width": 2189, "height": 929 },
+    "summary": "Jogos didáticos, oficinas e experimentos levados a eventos, congressos e escolas por todo canto.",
+    "href": "#"
+  },
+  {
+    "id": "empreendedores",
+    "name": "Empreendedores",
+    "accent": "#72BB0E",
+    "accentInk": "#3E7D1C",
+    "logo": { "src": "/images/logos/submarca-empreendedores.png", "alt": "1000 FC Empreendedores", "width": 2189, "height": 929 },
+    "summary": "Maratonas empreendedoras que desafiam os alunos a criar soluções inovadoras, com mentoria e premiação.",
+    "href": "#"
+  }
+]

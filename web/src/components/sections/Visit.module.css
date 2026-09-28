@@ -1,0 +1,36 @@
+.visit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.text {
+  padding: clamp(24px, 3vw, 40px);
+}
+.text h2 {
+  font-size: clamp(1.45rem, 2.2vw, 1.95rem);
+  margin: 0.6rem 0 0.8rem;
+}
+.text p {
+  color: var(--ink-soft);
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+.photo {
+  position: relative;
+  min-height: 230px;
+  background: var(--paper-2);
+}
+.photo img {
+  object-fit: cover;
+}
+
+@media (max-width: 960px) {
+  .visit {
+    grid-template-columns: 1fr;
+  }
+}

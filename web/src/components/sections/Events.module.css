@@ -1,0 +1,114 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.evt {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: clamp(16px, 2.5vw, 32px);
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(20px, 2.5vw, 32px);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.evt::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 7px;
+  background: linear-gradient(var(--green), var(--green-700));
+}
+.evt h3 {
+  font-size: clamp(1.12rem, 1.7vw, 1.42rem);
+  margin-bottom: 0.5rem;
+}
+.date {
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 0.8rem 1.1rem;
+  min-width: 100px;
+}
+.month {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--green-cta);
+  letter-spacing: 0.08em;
+  font-size: 0.9375rem;
+}
+.day {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--ink);
+}
+.caption {
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+.meta {
+  display: flex;
+  gap: 1rem 1.2rem;
+  flex-wrap: wrap;
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+.meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(105, 188, 69, 0.14);
+  color: var(--green-700);
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.28rem 0.7rem;
+  border-radius: 100px;
+  margin-bottom: 0.6rem;
+}
+.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 0 rgba(105, 188, 69, 0.6);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(105, 188, 69, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(105, 188, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(105, 188, 69, 0);
+  }
+}
+.note {
+  font-size: 0.875rem;
+  margin-top: 0.9rem;
+}
+
+@media (max-width: 960px) {
+  .evt {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+}

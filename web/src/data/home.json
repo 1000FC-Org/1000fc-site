@@ -1,0 +1,204 @@
+{
+  "hero": {
+    "eyebrow": "Programa de Extensão · UFMG · Depto. de Química",
+    "title": {
+      "before": "A ciência sai do laboratório e chega na ",
+      "highlight": "sua escola",
+      "after": "."
+    },
+    "lead": "O 1000 Futuros Cientistas leva experimentos, oficinas e descobertas para estudantes da rede pública. Divulgação, experimentação e popularização da ciência, gerando impacto social.",
+    "primaryCta": {
+      "label": "Quero ser voluntário",
+      "href": "#voluntariado"
+    },
+    "secondaryCta": {
+      "label": "Agendar uma visita",
+      "href": "#visitas"
+    },
+    "trust": [
+      "5 projetos ativos",
+      "Escolas públicas de MG",
+      "Feito por alunos da UFMG"
+    ],
+    "image": {
+      "src": "/images/photos/foto-02.jpeg",
+      "alt": "Estudantes em atividade de ciências",
+      "width": 1000,
+      "height": 500
+    },
+    "badges": [
+      {
+        "title": "UFMG",
+        "lines": [
+          "Depto. de",
+          "Química"
+        ],
+        "icon": "flask"
+      },
+      {
+        "title": "MG",
+        "lines": [
+          "escolas",
+          "públicas"
+        ],
+        "icon": "pin"
+      }
+    ]
+  },
+  "stats": {
+    "items": [
+      {
+        "value": 5,
+        "label": "projetos ativos"
+      },
+      {
+        "value": 120,
+        "suffix": "+",
+        "label": "escolas alcançadas"
+      },
+      {
+        "value": 8000,
+        "suffix": "+",
+        "label": "estudantes impactados"
+      },
+      {
+        "value": 300,
+        "suffix": "+",
+        "label": "voluntários engajados"
+      }
+    ],
+    "note": "*números ilustrativos para o mockup, a confirmar com a equipe"
+  },
+  "about": {
+    "eyebrow": "Sobre o programa",
+    "title": "Ciência acessível, feita por quem acredita nela.",
+    "text": "O 1000 Futuros Cientistas é organizado e executado por alunos da UFMG. Levamos experimentos até as escolas e recebemos estudantes nos laboratórios do Instituto de Química, criando conteúdos didáticos que aproximam a ciência de quem mais precisa dela.",
+    "pillars": [
+      {
+        "label": "Divulgação",
+        "icon": "plus"
+      },
+      {
+        "label": "Experimentação",
+        "icon": "flask"
+      },
+      {
+        "label": "Popularização",
+        "icon": "globe"
+      }
+    ],
+    "mission": {
+      "label": "Nossa missão",
+      "text": "Tornar o conhecimento científico acessível à população por meio da divulgação, experimentação e popularização da ciência, gerando impacto social."
+    }
+  },
+  "projects": {
+    "eyebrow": "Produtos e serviços",
+    "title": "Cinco projetos, um só objetivo: levar ciência a mais gente.",
+    "text": "Cada frente do 1000FC tem uma cor, uma identidade e um jeito próprio de despertar o interesse pela ciência.",
+    "placeholderCard": {
+      "title": "+ Novos projetos",
+      "text": "O programa cresce todo ano. Novas frentes podem ser adicionadas pelo painel, sem mexer no código."
+    }
+  },
+  "mapTool": {
+    "tag": "Ferramenta",
+    "title": "Mapa da Mineração",
+    "text": "Uma ferramenta interativa para explorar a mineração, hospedada aqui no site. Um dos produtos do 1000, disponível para toda a comunidade.",
+    "cta": {
+      "label": "Abrir o mapa",
+      "href": "https://1000fc-org.github.io/mineracao-mg/",
+      "external": true
+    }
+  },
+  "volunteer": {
+    "eyebrow": "Voluntariado",
+    "title": "Seja um voluntário do programa",
+    "text": "Quer levar o acesso à ciência a mais pessoas? Junte-se a estudantes e pesquisadores que fazem o 1000FC acontecer todos os dias.",
+    "cta": {
+      "label": "Quero ser voluntário",
+      "href": "#"
+    },
+    "steps": [
+      {
+        "title": "Inscreva-se",
+        "text": "Preencha o formulário e conte um pouco sobre você."
+      },
+      {
+        "title": "Participe da formação",
+        "text": "A gente te prepara para conduzir experimentos e oficinas."
+      },
+      {
+        "title": "Leve ciência às escolas",
+        "text": "Vá a campo com a equipe e transforme a vida de estudantes."
+      }
+    ]
+  },
+  "visit": {
+    "eyebrow": "Para escolas",
+    "title": "Traga sua escola para dentro da universidade.",
+    "text": "As visitas ao campus são um dos nossos principais serviços. Seus alunos têm contato com laboratórios de verdade, pesquisadores e experimentos que não cabem na sala de aula.",
+    "cta": {
+      "label": "Agendar uma visita",
+      "href": "#"
+    },
+    "image": {
+      "src": "/images/photos/foto-06.jpg",
+      "alt": "Visita ao campus da UFMG",
+      "width": 1000,
+      "height": 500
+    }
+  },
+  "events": {
+    "eyebrow": "O que está acontecendo",
+    "title": "Próximos eventos",
+    "note": "*evento e data ilustrativos, confirmar edição e data atual do congresso"
+  },
+  "gallery": {
+    "eyebrow": "Galeria",
+    "title": "A ciência acontecendo de verdade.",
+    "cta": {
+      "label": "Ver todas as fotos",
+      "href": "#"
+    }
+  },
+  "services": {
+    "eyebrow": "Autoatendimento",
+    "title": "Serviços online, sem burocracia",
+    "items": [
+      {
+        "id": "certificado",
+        "icon": "certificate",
+        "title": "Emita seu certificado",
+        "text": "Participou de um evento ou atividade? Gere e baixe seu certificado em segundos, de forma automática.",
+        "cta": {
+          "label": "Emitir certificado",
+          "href": "#"
+        }
+      },
+      {
+        "id": "relatorios",
+        "icon": "report",
+        "title": "Relatórios e transparência",
+        "text": "Acompanhe os resultados, números e relatórios do programa em um só lugar, sempre atualizados.",
+        "cta": {
+          "label": "Ver relatórios",
+          "href": "#"
+        }
+      }
+    ]
+  },
+  "proposal": {
+    "tag": "Proposta · sem código",
+    "title": "Todo o conteúdo é editável pelo painel",
+    "text": "Missão, projetos, eventos, números, galeria e relatórios: a equipe atualiza tudo por um painel simples e pode adicionar novos produtos quando o programa crescer. Sem depender de programador.",
+    "chips": [
+      "Missão",
+      "Projetos",
+      "Eventos",
+      "Números",
+      "Galeria",
+      "Relatórios"
+    ]
+  }
+}

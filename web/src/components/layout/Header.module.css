@@ -1,0 +1,117 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  transition: 0.3s;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 12px 20px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 8px 8px 8px 20px;
+  box-shadow: var(--shadow-sm);
+  transition: 0.3s;
+}
+.inner.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 26px -12px rgba(24, 58, 18, 0.3);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+.brand img {
+  height: 40px;
+  width: auto;
+}
+.links {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+.links a {
+  font-weight: 600;
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+  padding: 0.5rem 0.8rem;
+  border-radius: 100px;
+  transition: 0.2s;
+}
+.links a:hover {
+  color: var(--green-700);
+  background: rgba(105, 188, 69, 0.1);
+}
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.ctaButton {
+  padding: 0.6rem 1.15rem;
+  font-size: 0.95rem;
+}
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--ink);
+  border-radius: 2px;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 960px) {
+  .links {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .links.open {
+    display: flex;
+    position: absolute;
+    top: 68px;
+    left: 16px;
+    right: 16px;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 12px;
+    box-shadow: var(--shadow);
+    gap: 0.2rem;
+  }
+  .links.open a {
+    padding: 0.8rem 1rem;
+  }
+}
+@media (max-width: 560px) {
+  .ctaButton {
+    display: none;
+  }
+}

@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Web
+web/node_modules/
+web/.next/
+web/out/
+web/next-env.d.ts
+web/*.tsbuildinfo
+web/.env*
+
+# IDE
+.vscode/
+.idea/
