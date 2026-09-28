@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import type { SiteContent } from "@/lib/types";
 import { useScrolled } from "@/hooks/useScrolled";
 import styles from "./Header.module.css";
+import { asset } from "@/lib/asset";
 
 type Props = Pick<SiteContent, "logo" | "nav" | "headerCta">;
 
@@ -24,7 +25,7 @@ export function Header({ logo, nav, headerCta }: Props) {
       <div className={styles.nav}>
         <div className={`${styles.inner} ${scrolled ? styles.scrolled : ""}`}>
           <a href="#top" className={styles.brand}>
-            <Image src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} priority />
+            <Image src={asset(logo.src)} alt={logo.alt} width={logo.width} height={logo.height} priority />
           </a>
 
           <nav

@@ -7,7 +7,7 @@ import { getHome, getSite } from "@/lib/content";
 export async function generateMetadata(): Promise<Metadata> {
   const [site, home] = await Promise.all([getSite(), getHome()]);
   return {
-    metadataBase: new URL(site.url),
+    metadataBase: new URL(process.env.SITE_URL || site.url),
     title: site.title,
     description: site.description,
     openGraph: {
@@ -30,7 +30,6 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang={site.locale}>
       <body>
-        {/* Sem JS, o conteúdo das animações de entrada aparece direto. */}
         <noscript>
           <style>{`.reveal,.stagger>*{opacity:1!important;transform:none!important}`}</style>
         </noscript>

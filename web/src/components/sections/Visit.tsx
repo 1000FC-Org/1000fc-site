@@ -3,6 +3,7 @@ import type { HomeContent } from "@/lib/types";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import styles from "./Visit.module.css";
+import { asset } from "@/lib/asset";
 
 export function Visit({ visit }: { visit: HomeContent["visit"] }) {
   return (
@@ -19,7 +20,7 @@ export function Visit({ visit }: { visit: HomeContent["visit"] }) {
             </a>
           </div>
           <div className={styles.photo}>
-            <Image src={visit.image.src} alt={visit.image.alt} fill sizes="(max-width: 960px) 100vw, 560px" />
+            <Image src={asset(visit.image.src)} alt={visit.image.alt} fill sizes="(max-width: 960px) 100vw, 560px" />
           </div>
         </div>
       </Reveal>

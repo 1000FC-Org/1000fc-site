@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { GalleryItem, HomeContent } from "@/lib/types";
 import { Reveal } from "@/components/ui/Reveal";
 import styles from "./Gallery.module.css";
+import { asset } from "@/lib/asset";
 
 type Props = {
   intro: HomeContent["gallery"];
@@ -57,7 +58,7 @@ export function Gallery({ intro, items }: Props) {
               onClick={(e) => open(item, e.currentTarget)}
             >
               <Image
-                src={item.src}
+                src={asset(item.src)}
                 alt={item.alt}
                 fill
                 sizes={item.size === "normal" ? "(max-width: 560px) 100vw, 280px" : "(max-width: 560px) 100vw, 560px"}
@@ -81,7 +82,7 @@ export function Gallery({ intro, items }: Props) {
         {active ? (
           // Imagem original em tamanho cheio (sem otimização) para o zoom.
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={active.src} alt={active.alt} />
+          <img src={asset(active.src)} alt={active.alt} />
         ) : null}
       </div>
     </section>

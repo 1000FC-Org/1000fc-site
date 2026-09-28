@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Project, SiteContent } from "@/lib/types";
 import { Icon } from "@/components/ui/Icon";
 import styles from "./Footer.module.css";
+import { asset } from "@/lib/asset";
 
 type Props = {
   site: SiteContent;
@@ -23,7 +24,7 @@ export function Footer({ site, projects, extraProjectLinks = [] }: Props) {
         <div className={styles.grid}>
           <div className={styles.brand}>
             <div className={styles.chip}>
-              <Image src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} />
+              <Image src={asset(logo.src)} alt={logo.alt} width={logo.width} height={logo.height} />
             </div>
             <p>{footer.tagline}</p>
             <div className={styles.socials}>

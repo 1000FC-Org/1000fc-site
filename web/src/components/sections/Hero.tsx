@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { HomeContent } from "@/lib/types";
 import { FlaskMini, Icon } from "@/components/ui/Icon";
 import styles from "./Hero.module.css";
+import { asset } from "@/lib/asset";
 
 export function Hero({ hero }: { hero: HomeContent["hero"] }) {
   const [badgeTop, badgeBottom] = hero.badges;
@@ -39,7 +40,7 @@ export function Hero({ hero }: { hero: HomeContent["hero"] }) {
         <div className={styles.visual}>
           <div className={styles.photo}>
             <Image
-              src={hero.image.src}
+              src={asset(hero.image.src)}
               alt={hero.image.alt}
               fill
               priority

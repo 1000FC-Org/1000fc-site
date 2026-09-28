@@ -4,6 +4,7 @@ import type { HomeContent, Project } from "@/lib/types";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import styles from "./Projects.module.css";
+import { asset } from "@/lib/asset";
 
 type Props = {
   intro: HomeContent["projects"];
@@ -50,7 +51,7 @@ function ProjectCard({ project }: { project: Project }) {
     <article className={styles.card} style={style}>
       <div className={styles.banner}>
         <Image
-          src={project.logo.src}
+          src={asset(project.logo.src)}
           alt={project.logo.alt}
           width={project.logo.width}
           height={project.logo.height}

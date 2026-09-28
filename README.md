@@ -27,6 +27,28 @@ Outros scripts (todos dentro de `web/`):
 
 O workflow `.github/workflows/ci.yml` roda lint, typecheck e build a cada push na `main` e em PRs.
 
+## Deploy (GitHub Pages)
+
+Publicação manual via GitHub Actions.
+
+1. Uma vez só: em **Settings → Pages** do repositório, escolher **Source: GitHub Actions**.
+2. Para publicar: **Actions → Deploy to GitHub Pages → Run workflow** (branch `main`).
+3. O site sai em `https://1000fc-org.github.io/1000fc-site/`.
+
+O workflow (`.github/workflows/deploy.yml`) faz o build com `STATIC_EXPORT=true`, que liga o modo estático do Next (`output: "export"`, imagens sem otimização e `basePath` com o subcaminho do Pages). O subcaminho e a URL pública vêm do próprio `actions/configure-pages`, então nada fica fixo no código.
+
+Para testar esse modo localmente:
+
+```bash
+cd web
+STATIC_EXPORT=true PAGES_BASE_PATH=/1000fc-site npm run build
+# o resultado fica em web/out/
+```
+
+Caminhos de arquivos em `public/` usados como texto (os `src` dos JSONs) passam por `asset()` (`src/lib/asset.ts`), que coloca o prefixo do subcaminho. Ao adicionar uma imagem nova em um componente, use `src={asset(...)}`.
+
+O modo padrão (sem `STATIC_EXPORT`) continua sendo o de servidor Node/Vercel, que é o que o site vai precisar quando tiver login e painel.
+
 ## Stack
 
 - **Next.js 16** (App Router, Turbopack) com **React 19** e **TypeScript**
@@ -60,6 +82,7 @@ web/
     lib/
       types.ts              # tipos de todo o conteúdo
       content.ts            # única porta de acesso aos dados (getSite, getHome...)
+      asset.ts              # prefixa caminhos de public/ com o basePath (GitHub Pages)
   public/
     images/logos/           # logo principal e submarcas
     images/photos/          # fotos
@@ -93,7 +116,7 @@ Nada disso está implementado ainda. O caminho previsto:
 3. Criar as telas do painel usando os mesmos tipos de `types.ts` e salvar via Server Actions, revalidando as páginas públicas depois de cada edição.
 4. Formulários reais (voluntário, agendamento de visitas) e emissão de certificados como rotas/Server Actions.
 
-**Hospedagem:** hoje todas as páginas saem estáticas no build, mas com login e painel o site precisa de um servidor Node (ou Vercel). Não dá para ficar só no GitHub Pages como o Mineração MG.
+**Hospedagem:** o GitHub Pages serve bem enquanto o site é só conteúdo. Com login e painel o site precisa de um servidor Node (ou Vercel), e o modo `STATIC_EXPORT` deixa de ser suficiente.
 
 ## O que mudou em relação ao mockup
 
