@@ -8,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const [site, home] = await Promise.all([getSite(), getHome()]);
   return {
     metadataBase: new URL(process.env.SITE_URL || site.url),
-    title: site.title,
+    title: { default: site.title, template: `%s · ${site.name}` },
     description: site.description,
     openGraph: {
       type: "website",

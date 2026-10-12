@@ -4,6 +4,7 @@ import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import styles from "./Visit.module.css";
 import { asset } from "@/lib/asset";
+import { SmartLink } from "@/components/ui/SmartLink";
 
 export function Visit({ visit }: { visit: HomeContent["visit"] }) {
   return (
@@ -14,10 +15,10 @@ export function Visit({ visit }: { visit: HomeContent["visit"] }) {
             <span className="eyebrow">{visit.eyebrow}</span>
             <h2>{visit.title}</h2>
             <p>{visit.text}</p>
-            <a href={visit.cta.href} className="btn btn-primary">
+            <SmartLink href={visit.cta.href} className="btn btn-primary">
               {visit.cta.label}
               <Icon name="calendar" width={18} height={18} />
-            </a>
+            </SmartLink>
           </div>
           <div className={styles.photo}>
             <Image src={asset(visit.image.src)} alt={visit.image.alt} fill sizes="(max-width: 960px) 100vw, 560px" />

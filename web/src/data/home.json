@@ -6,19 +6,19 @@
       "highlight": "sua escola",
       "after": "."
     },
-    "lead": "O 1000 Futuros Cientistas leva experimentos, oficinas e descobertas para estudantes da rede pública. Divulgação, experimentação e popularização da ciência, gerando impacto social.",
+    "lead": "O 1000 Futuros Cientistas leva experimentos, oficinas e visitas aos laboratórios para estudantes da rede pública, cria materiais didáticos a partir de pesquisas e forma professores.",
     "primaryCta": {
       "label": "Quero ser voluntário",
-      "href": "#voluntariado"
+      "href": "/voluntariado"
     },
     "secondaryCta": {
       "label": "Agendar uma visita",
-      "href": "#visitas"
+      "href": "/visitas"
     },
     "trust": [
-      "5 projetos ativos",
+      "6 projetos",
       "Escolas públicas de MG",
-      "Feito por alunos da UFMG"
+      "Feito na UFMG"
     ],
     "image": {
       "src": "/images/photos/foto-02.jpeg",
@@ -48,31 +48,31 @@
   "stats": {
     "items": [
       {
-        "value": 5,
-        "label": "projetos ativos"
+        "value": 6,
+        "label": "projetos"
       },
       {
-        "value": 120,
-        "suffix": "+",
-        "label": "escolas alcançadas"
+        "value": 18000,
+        "prefix": "+",
+        "label": "estudantes alcançados"
       },
       {
-        "value": 8000,
-        "suffix": "+",
-        "label": "estudantes impactados"
+        "value": 270,
+        "prefix": "+",
+        "label": "professores da Educação Básica"
       },
       {
-        "value": 300,
-        "suffix": "+",
-        "label": "voluntários engajados"
+        "value": 600,
+        "prefix": "+",
+        "label": "colaboradores"
       }
     ],
-    "note": "*números ilustrativos para o mockup, a confirmar com a equipe"
+    "note": "Dados do programa até 2025."
   },
   "about": {
     "eyebrow": "Sobre o programa",
     "title": "Ciência acessível, feita por quem acredita nela.",
-    "text": "O 1000 Futuros Cientistas é organizado e executado por alunos da UFMG. Levamos experimentos até as escolas e recebemos estudantes nos laboratórios do Instituto de Química, criando conteúdos didáticos que aproximam a ciência de quem mais precisa dela.",
+    "text": "O 1000 Futuros Cientistas é um programa de extensão da UFMG que aproxima a universidade das escolas públicas. Oferece experimentos, oficinas e visitas aos laboratórios, desenvolve materiais didáticos a partir de pesquisas científicas e promove formação para professores.",
     "pillars": [
       {
         "label": "Divulgação",
@@ -90,21 +90,25 @@
     "mission": {
       "label": "Nossa missão",
       "text": "Tornar o conhecimento científico acessível à população por meio da divulgação, experimentação e popularização da ciência, gerando impacto social."
+    },
+    "cta": {
+      "label": "Conheça o programa",
+      "href": "/sobre"
     }
   },
   "projects": {
     "eyebrow": "Produtos e serviços",
-    "title": "Cinco projetos, um só objetivo: levar ciência a mais gente.",
+    "title": "Seis projetos, um só objetivo: levar ciência a mais gente.",
     "text": "Cada frente do 1000FC tem uma cor, uma identidade e um jeito próprio de despertar o interesse pela ciência.",
-    "placeholderCard": {
-      "title": "+ Novos projetos",
-      "text": "O programa cresce todo ano. Novas frentes podem ser adicionadas pelo painel, sem mexer no código."
+    "cta": {
+      "label": "Ver todos os projetos",
+      "href": "/projetos"
     }
   },
   "mapTool": {
     "tag": "Ferramenta",
     "title": "Mapa da Mineração",
-    "text": "Uma ferramenta interativa para explorar a mineração, hospedada aqui no site. Um dos produtos do 1000, disponível para toda a comunidade.",
+    "text": "Uma ferramenta interativa para explorar a mineração em Minas Gerais: as regiões, os minérios extraídos e os municípios produtores. Criada pelo 1000FC e aberta a toda a comunidade.",
     "cta": {
       "label": "Abrir o mapa",
       "href": "https://1000fc-org.github.io/mineracao-mg/",
@@ -117,7 +121,7 @@
     "text": "Quer levar o acesso à ciência a mais pessoas? Junte-se a estudantes e pesquisadores que fazem o 1000FC acontecer todos os dias.",
     "cta": {
       "label": "Quero ser voluntário",
-      "href": "#"
+      "href": "/voluntariado"
     },
     "steps": [
       {
@@ -140,7 +144,7 @@
     "text": "As visitas ao campus são um dos nossos principais serviços. Seus alunos têm contato com laboratórios de verdade, pesquisadores e experimentos que não cabem na sala de aula.",
     "cta": {
       "label": "Agendar uma visita",
-      "href": "#"
+      "href": "/visitas"
     },
     "image": {
       "src": "/images/photos/foto-06.jpg",
@@ -152,53 +156,17 @@
   "events": {
     "eyebrow": "O que está acontecendo",
     "title": "Próximos eventos",
-    "note": "*evento e data ilustrativos, confirmar edição e data atual do congresso"
+    "cta": {
+      "label": "Ver agenda",
+      "href": "/eventos"
+    }
   },
   "gallery": {
     "eyebrow": "Galeria",
     "title": "A ciência acontecendo de verdade.",
     "cta": {
       "label": "Ver todas as fotos",
-      "href": "#"
+      "href": "/galeria"
     }
-  },
-  "services": {
-    "eyebrow": "Autoatendimento",
-    "title": "Serviços online, sem burocracia",
-    "items": [
-      {
-        "id": "certificado",
-        "icon": "certificate",
-        "title": "Emita seu certificado",
-        "text": "Participou de um evento ou atividade? Gere e baixe seu certificado em segundos, de forma automática.",
-        "cta": {
-          "label": "Emitir certificado",
-          "href": "#"
-        }
-      },
-      {
-        "id": "relatorios",
-        "icon": "report",
-        "title": "Relatórios e transparência",
-        "text": "Acompanhe os resultados, números e relatórios do programa em um só lugar, sempre atualizados.",
-        "cta": {
-          "label": "Ver relatórios",
-          "href": "#"
-        }
-      }
-    ]
-  },
-  "proposal": {
-    "tag": "Proposta · sem código",
-    "title": "Todo o conteúdo é editável pelo painel",
-    "text": "Missão, projetos, eventos, números, galeria e relatórios: a equipe atualiza tudo por um painel simples e pode adicionar novos produtos quando o programa crescer. Sem depender de programador.",
-    "chips": [
-      "Missão",
-      "Projetos",
-      "Eventos",
-      "Números",
-      "Galeria",
-      "Relatórios"
-    ]
   }
 }

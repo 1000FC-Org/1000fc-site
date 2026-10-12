@@ -1,47 +1,308 @@
 [
   {
-    "id": "inspirati",
-    "name": "Inspirati",
-    "accent": "#FF4B69",
-    "accentInk": "#C81E3C",
-    "logo": { "src": "/images/logos/submarca-inspirati.png", "alt": "Inspirati", "width": 2189, "height": 929 },
-    "summary": "Práticas e metodologias científicas levadas até a sala de aula, despertando o interesse dos alunos da rede básica.",
-    "href": "#"
-  },
-  {
-    "id": "hialo-tech",
-    "name": "Hialo Tech",
-    "accent": "#EF4827",
-    "accentInk": "#B83A1E",
-    "logo": { "src": "/images/logos/submarca-hialotech.png", "alt": "Hialo Tech", "width": 2189, "height": 929 },
-    "summary": "Hialotecnia, o trabalho com o vidro e a educação socioambiental, com foco em reciclagem e meio ambiente.",
-    "href": "#"
-  },
-  {
     "id": "experimentando",
-    "name": "Experimentando no DQ",
+    "name": "Experimentando Ciências no DQ",
+    "shortName": "Experimentando no DQ",
     "accent": "#F9B233",
     "accentInk": "#8A5A00",
-    "logo": { "src": "/images/logos/submarca-experimentando.png", "alt": "Experimentando Ciências no DQ", "width": 2189, "height": 929 },
-    "summary": "Experiências práticas dentro dos laboratórios da UFMG, com pesquisadores e tecnologia de ponta.",
-    "href": "#"
+    "logo": {
+      "src": "/images/logos/submarca-experimentando.png",
+      "alt": "Experimentando Ciências no DQ",
+      "width": 2189,
+      "height": 929
+    },
+    "summary": "Estudantes da Educação Básica nos laboratórios do Departamento de Química, fazendo experimentos orientados.",
+    "description": [
+      "O Experimentando Ciências no DQ recebe estudantes da Educação Básica nos laboratórios do Departamento de Química para realizar experimentos orientados e conhecer o ambiente universitário.",
+      "Foi o primeiro projeto do programa, criado em 2018 para aproximar a UFMG das escolas, e atende turmas do Ensino Fundamental, do Ensino Médio e da EJA."
+    ],
+    "coordination": "TAE Isabela Toledo Lima",
+    "activities": [
+      "Visitas aos laboratórios do Departamento de Química",
+      "Experimentos orientados por monitores",
+      "Conversa com Cientistas"
+    ],
+    "cta": {
+      "label": "Agendar uma visita",
+      "href": "/visitas"
+    },
+    "photos": [
+      {
+        "src": "/images/projetos/experimentando/lab-estudantes.jpg",
+        "alt": "Duas estudantes fazendo um experimento em bancada de laboratório",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/images/projetos/experimentando/turma-laboratorio.jpg",
+        "alt": "Turma de estudantes de jaleco reunida em um laboratório do Departamento de Química",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/images/projetos/experimentando/conversa-cientistas.jpg",
+        "alt": "Pesquisadora conversa com estudantes dentro de um laboratório",
+        "width": 1600,
+        "height": 934
+      },
+      {
+        "src": "/images/projetos/experimentando/patio.jpg",
+        "alt": "Grupo grande de estudantes em visita ao campus, sentados no pátio",
+        "width": 1152,
+        "height": 864
+      },
+      {
+        "src": "/images/projetos/experimentando/demonstracao.jpg",
+        "alt": "Pesquisador faz uma demonstração para estudantes de jaleco",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/images/projetos/experimentando/auditorio.jpg",
+        "alt": "Estudantes da educação básica em um auditório da UFMG",
+        "width": 1600,
+        "height": 1200
+      }
+    ]
   },
   {
     "id": "pelo-mundo",
-    "name": "Pelo Mundo",
+    "name": "1000FC Pelo Mundo",
+    "shortName": "Pelo Mundo",
     "accent": "#02A896",
     "accentInk": "#0B7A6E",
-    "logo": { "src": "/images/logos/submarca-pelomundo.png", "alt": "1000 FC Pelo Mundo", "width": 2189, "height": 929 },
-    "summary": "Jogos didáticos, oficinas e experimentos levados a eventos, congressos e escolas por todo canto.",
-    "href": "#"
+    "logo": {
+      "src": "/images/logos/submarca-pelomundo.png",
+      "alt": "1000 FC Pelo Mundo",
+      "width": 2189,
+      "height": 929
+    },
+    "summary": "Oficinas, jogos e experimentos científicos levados a escolas e comunidades fora da UFMG.",
+    "description": [
+      "O 1000FC Pelo Mundo leva oficinas, jogos e experimentos científicos a escolas e comunidades, ampliando o acesso às atividades do programa fora da UFMG."
+    ],
+    "coordination": "TAE Janaína de Paula e Silva",
+    "activities": [
+      "Oficinas de experimentos científicos",
+      "Dia com Ciência: oficinas externas",
+      "Rodas de conversa e demonstrações"
+    ],
+    "photos": [
+      {
+        "src": "/images/projetos/pelo-mundo/oficina-externa.jpg",
+        "alt": "Monitor apresenta um experimento para estudantes em uma oficina fora da UFMG",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/images/projetos/pelo-mundo/bafo-de-onca.jpg",
+        "alt": "Estudantes de jaleco em uma escola com o experimento Bafo de Onça",
+        "width": 1600,
+        "height": 1066
+      },
+      {
+        "src": "/images/projetos/pelo-mundo/criancas-computador.jpg",
+        "alt": "Crianças acompanham uma atividade de divulgação científica ao ar livre",
+        "width": 1600,
+        "height": 1200
+      },
+      {
+        "src": "/images/projetos/pelo-mundo/tenda.jpg",
+        "alt": "Equipe do 1000FC em uma tenda de atividades ao ar livre",
+        "width": 768,
+        "height": 1024
+      }
+    ]
   },
   {
-    "id": "empreendedores",
-    "name": "Empreendedores",
+    "id": "inspirati",
+    "name": "Inspirati",
+    "shortName": "Inspirati",
+    "accent": "#FF4B69",
+    "accentInk": "#C81E3C",
+    "logo": {
+      "src": "/images/logos/submarca-inspirati.png",
+      "alt": "Inspirati",
+      "width": 2189,
+      "height": 929
+    },
+    "summary": "Pesquisas e tecnologias da universidade transformadas em kits, jogos e recursos didáticos.",
+    "description": [
+      "O Inspirati transforma pesquisas e tecnologias desenvolvidas na universidade em kits, jogos e outros recursos didáticos, elaborados em diálogo com professores e utilizados em aulas, oficinas e formações."
+    ],
+    "coordination": "Profª. Ana Paula de Carvalho Teixeira",
+    "activities": [
+      "Kits 1000FC (mais de 700 distribuídos)",
+      "Roteiros de experimentos, materiais e reagentes",
+      "Vídeos e atividades didáticas"
+    ],
+    "photos": [
+      {
+        "src": "/images/projetos/inspirati/kit.jpg",
+        "alt": "Kit didático do 1000FC com reagentes, luvas e roteiro",
+        "width": 1024,
+        "height": 834
+      },
+      {
+        "src": "/images/projetos/inspirati/jogo.jpg",
+        "alt": "Kit com frascos de reagentes e tabuleiro de jogo didático",
+        "width": 1600,
+        "height": 1274
+      },
+      {
+        "src": "/images/projetos/inspirati/kit-mesa.jpg",
+        "alt": "Kit de experimentos e computador em uma mesa de atividade",
+        "width": 868,
+        "height": 1160
+      },
+      {
+        "src": "/images/projetos/inspirati/gravacao.jpg",
+        "alt": "Gravação de vídeo de um experimento para os kits didáticos",
+        "width": 1197,
+        "height": 1600
+      },
+      {
+        "src": "/images/projetos/inspirati/roteiro-csi.jpg",
+        "alt": "Roteiro do experimento CSI: investigando sua digital",
+        "width": 814,
+        "height": 1079
+      },
+      {
+        "src": "/images/projetos/inspirati/roteiro-caneta.jpg",
+        "alt": "Roteiro do experimento Caneta de espião",
+        "width": 812,
+        "height": 1079
+      },
+      {
+        "src": "/images/projetos/inspirati/roteiro-bafo.jpg",
+        "alt": "Roteiro do experimento Bafo de onça",
+        "width": 810,
+        "height": 1073
+      }
+    ]
+  },
+  {
+    "id": "hialotecnia",
+    "name": "Hialotecnia, Arte e Sustentabilidade",
+    "shortName": "Hialo Tech",
+    "accent": "#EF4827",
+    "accentInk": "#B83A1E",
+    "logo": {
+      "src": "/images/logos/submarca-hialotech.png",
+      "alt": "Hialo Tech",
+      "width": 2189,
+      "height": 929
+    },
+    "summary": "Técnicas de trabalho com vidro, suas aplicações científicas e artísticas e educação ambiental.",
+    "description": [
+      "O Hialotecnia, Arte e Sustentabilidade apresenta as técnicas de trabalho com vidro e suas aplicações científicas e artísticas.",
+      "Também desenvolve atividades de educação ambiental ligadas ao reaproveitamento de resíduos vítreos."
+    ],
+    "coordination": "TAE Wladmir Teodoro da Silva",
+    "activities": [
+      "Técnicas de trabalho com vidro (hialotecnia)",
+      "Aplicações científicas e artísticas do vidro",
+      "Educação ambiental e reaproveitamento de resíduos vítreos"
+    ],
+    "photos": []
+  },
+  {
+    "id": "empreendedorismo",
+    "name": "Levando o empreendedorismo para a Educação Básica",
+    "shortName": "Empreendedores",
     "accent": "#72BB0E",
     "accentInk": "#3E7D1C",
-    "logo": { "src": "/images/logos/submarca-empreendedores.png", "alt": "1000 FC Empreendedores", "width": 2189, "height": 929 },
-    "summary": "Maratonas empreendedoras que desafiam os alunos a criar soluções inovadoras, com mentoria e premiação.",
-    "href": "#"
+    "logo": {
+      "src": "/images/logos/submarca-empreendedores.png",
+      "alt": "1000 FC Empreendedores",
+      "width": 2189,
+      "height": 929
+    },
+    "summary": "Oficinas, mentorias e desafios em que estudantes propõem soluções para problemas reais.",
+    "description": [
+      "O Levando o empreendedorismo para a Educação Básica promove oficinas, mentorias e desafios nos quais estudantes identificam problemas reais e propõem soluções, exercitando criatividade, colaboração e pensamento crítico."
+    ],
+    "coordination": "Prof. Rochel Montero Lago",
+    "activities": [
+      "Maratona Empreendedora",
+      "Oficinas e mentorias",
+      "Desafios a partir de problemas reais"
+    ],
+    "photos": [
+      {
+        "src": "/images/projetos/empreendedorismo/maratona-plateia.jpg",
+        "alt": "Plateia lotada na Maratona Empreendedora",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/images/projetos/empreendedorismo/maratona-premiacao.jpg",
+        "alt": "Premiação da Maratona Empreendedora",
+        "width": 1080,
+        "height": 1080
+      },
+      {
+        "src": "/images/projetos/empreendedorismo/maratona-publico.jpg",
+        "alt": "Estudantes na plateia da Maratona Empreendedora",
+        "width": 1080,
+        "height": 1080
+      }
+    ]
+  },
+  {
+    "id": "casa-do-professor",
+    "name": "A Casa do Professor",
+    "shortName": "Casa do Professor",
+    "accent": "#EE8F1B",
+    "accentInk": "#A3530A",
+    "logo": {
+      "src": "/images/logos/submarca-casadoprofessor.png",
+      "alt": "A Casa do Professor",
+      "width": 2189,
+      "height": 929
+    },
+    "summary": "Espaço de encontro e formação para docentes da Educação Básica, com o apoio da universidade.",
+    "description": [
+      "Criado por iniciativa da pós-graduação em Química, A Casa do Professor foi vinculada ao programa em 2024.",
+      "O projeto oferece um espaço de encontro e formação para docentes da Educação Básica, com acesso à infraestrutura, a tecnologias e ao apoio da universidade para desenvolver e experimentar práticas e recursos didáticos."
+    ],
+    "coordination": "Profª. Rita de Cássia Oliveira Sebastião",
+    "activities": [
+      "Cursos e oficinas formativas para professores",
+      "Acesso à infraestrutura e às tecnologias da UFMG",
+      "Desenvolvimento de práticas e recursos didáticos"
+    ],
+    "photos": [
+      {
+        "src": "/images/projetos/casa-do-professor/encontro.jpg",
+        "alt": "Professores reunidos na Casa do Professor",
+        "width": 1600,
+        "height": 1200
+      },
+      {
+        "src": "/images/projetos/casa-do-professor/formacao.jpg",
+        "alt": "Professores em uma sala de formação",
+        "width": 1600,
+        "height": 1200
+      },
+      {
+        "src": "/images/projetos/casa-do-professor/espaco.jpg",
+        "alt": "Entrada da Casa do Professor, com portas laranja e o símbolo do projeto",
+        "width": 1019,
+        "height": 1280
+      },
+      {
+        "src": "/images/projetos/casa-do-professor/kits.jpg",
+        "alt": "Professoras recebem kits didáticos",
+        "width": 576,
+        "height": 1024
+      },
+      {
+        "src": "/images/projetos/casa-do-professor/fachada.jpg",
+        "alt": "Identidade visual da Casa do Professor na porta do espaço",
+        "width": 834,
+        "height": 1280
+      }
+    ]
   }
 ]

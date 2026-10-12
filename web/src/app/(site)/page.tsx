@@ -7,16 +7,10 @@ import { Volunteer } from "@/components/sections/Volunteer";
 import { Visit } from "@/components/sections/Visit";
 import { Events } from "@/components/sections/Events";
 import { Gallery } from "@/components/sections/Gallery";
-import { Services } from "@/components/sections/Services";
-import { Proposal } from "@/components/sections/Proposal";
 
+/** Landing: vitrine com um resumo de cada página. */
 export default async function HomePage() {
-  const [home, projects, events, gallery] = await Promise.all([
-    getHome(),
-    getProjects(),
-    getEvents(),
-    getGallery(),
-  ]);
+  const [home, projects, events, gallery] = await Promise.all([getHome(), getProjects(), getEvents(), getGallery()]);
 
   return (
     <>
@@ -26,10 +20,8 @@ export default async function HomePage() {
       <Projects intro={home.projects} projects={projects} mapTool={home.mapTool} />
       <Volunteer volunteer={home.volunteer} />
       <Visit visit={home.visit} />
-      <Events intro={home.events} events={events} />
+      {events.length ? <Events intro={home.events} events={events} /> : null}
       <Gallery intro={home.gallery} items={gallery} />
-      <Services services={home.services} />
-      {home.proposal ? <Proposal proposal={home.proposal} /> : null}
     </>
   );
 }

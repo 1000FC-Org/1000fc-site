@@ -1,6 +1,6 @@
 {
   "name": "1000 Futuros Cientistas",
-  "title": "1000 Futuros Cientistas · Nova Home (mockup)",
+  "title": "1000 Futuros Cientistas",
   "description": "Programa de extensão do Departamento de Química da UFMG que leva experimentos, oficinas e descobertas para estudantes da rede pública de Minas Gerais.",
   "url": "https://1000fc.qui.ufmg.br",
   "locale": "pt-BR",
@@ -11,42 +11,72 @@
     "height": 88
   },
   "nav": [
-    { "label": "Sobre", "href": "#sobre" },
-    { "label": "Projetos", "href": "#projetos" },
-    { "label": "Voluntariado", "href": "#voluntariado" },
-    { "label": "Visitas", "href": "#visitas" },
-    { "label": "Eventos", "href": "#eventos" },
-    { "label": "Galeria", "href": "#galeria" },
-    { "label": "Contato", "href": "#contato" }
+    {
+      "label": "Sobre",
+      "href": "/sobre"
+    },
+    {
+      "label": "Projetos",
+      "href": "/projetos"
+    },
+    {
+      "label": "Visitas",
+      "href": "/visitas"
+    },
+    {
+      "label": "Eventos",
+      "href": "/eventos"
+    },
+    {
+      "label": "Galeria",
+      "href": "/galeria"
+    },
+    {
+      "label": "Contato",
+      "href": "/contato"
+    }
   ],
-  "headerCta": { "label": "Seja voluntário", "href": "#voluntariado" },
+  "headerCta": {
+    "label": "Seja voluntário",
+    "href": "/voluntariado"
+  },
   "social": [
-    { "network": "instagram", "label": "Instagram", "href": "https://www.instagram.com/1000futuroscientistas/" },
-    { "network": "facebook", "label": "Facebook", "href": "https://www.facebook.com/experimentandodqufmg/" },
-    { "network": "youtube", "label": "YouTube", "href": "https://www.youtube.com/@FuturosCientistas-bb6dv" },
-    { "network": "tiktok", "label": "TikTok", "href": "https://www.tiktok.com/@1000futuroscientistas" },
-    { "network": "mail", "label": "E-mail", "href": "mailto:1000futuroscientistas@qui.ufmg.br" }
+    {
+      "network": "instagram",
+      "label": "Instagram",
+      "href": "https://www.instagram.com/1000futuroscientistas/"
+    },
+    {
+      "network": "facebook",
+      "label": "Facebook",
+      "href": "https://www.facebook.com/experimentandodqufmg/"
+    },
+    {
+      "network": "youtube",
+      "label": "YouTube",
+      "href": "https://www.youtube.com/@FuturosCientistas-bb6dv"
+    },
+    {
+      "network": "tiktok",
+      "label": "TikTok",
+      "href": "https://www.tiktok.com/@1000futuroscientistas"
+    },
+    {
+      "network": "mail",
+      "label": "E-mail",
+      "href": "mailto:1000futuroscientistas@qui.ufmg.br"
+    }
   ],
   "contact": {
     "email": "1000futuroscientistas@qui.ufmg.br",
     "address": "Departamento de Química, UFMG · Pampulha, Belo Horizonte, MG"
   },
   "footer": {
-    "tagline": "Programa de Extensão que leva a ciência das universidades para as escolas da rede pública de Minas Gerais.",
-    "navTitle": "Navegação",
-    "nav": [
-      { "label": "Sobre", "href": "#sobre" },
-      { "label": "Projetos", "href": "#projetos" },
-      { "label": "Voluntariado", "href": "#voluntariado" },
-      { "label": "Visitas", "href": "#visitas" },
-      { "label": "Eventos", "href": "#eventos" },
-      { "label": "Galeria", "href": "#galeria" },
-      { "label": "Certificados e relatórios", "href": "#servicos" }
-    ],
-    "projectsTitle": "Projetos",
-    "contactTitle": "Contato",
-    "cta": { "label": "Seja voluntário", "href": "#voluntariado" },
-    "legal": "© 2025 1000 Futuros Cientistas · Programa de Extensão · Departamento de Química, UFMG",
-    "note": "Mockup de redesign · proposta de UX/UI"
+    "tagline": "Programa de extensão da UFMG que aproxima a universidade das escolas públicas de Minas Gerais.",
+    "legal": "1000 Futuros Cientistas · Programa de Extensão · Departamento de Química, UFMG"
+  },
+  "forms": {
+    "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSfHP9u7MTFNizIS-o0Szq44i5T52hXTahRR6v0N7zBWYozziA/viewform",
+    "visit": "https://docs.google.com/forms/d/e/1FAIpQLSc2SA3_oewemT1m1c7G5ih2LCfQL-2y2JaiHl9p-cja-55xYA/viewform"
   }
 }

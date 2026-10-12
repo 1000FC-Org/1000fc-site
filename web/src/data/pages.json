@@ -1,0 +1,346 @@
+{
+  "sobre": {
+    "eyebrow": "Sobre o programa",
+    "title": "A universidade de portas abertas para a escola pública.",
+    "lead": "O 1000 Futuros Cientistas (1000FC) é um programa de extensão da UFMG que aproxima a universidade das escolas públicas.",
+    "paragraphs": [
+      "O programa oferece experimentos, oficinas e visitas aos laboratórios, desenvolve materiais didáticos a partir de pesquisas científicas e promove formação para professores. Também incentiva estudantes a criar soluções para problemas do cotidiano, tornando a ciência mais acessível e presente na escola.",
+      "O 1000FC tem a coordenação geral da TAE Janaína de Paula e Silva e conta com outros 9 gestores que colaboram na coordenação dos projetos e no planejamento do programa. Seis projetos vinculados realizam essas atividades."
+    ],
+    "mission": {
+      "label": "Nossa missão",
+      "text": "Tornar o conhecimento científico acessível à população por meio da divulgação, experimentação e popularização da ciência, gerando impacto social."
+    },
+    "numbers": {
+      "title": "O programa em números",
+      "items": [
+        {
+          "value": 18000,
+          "prefix": "+",
+          "label": "estudantes da Educação Básica"
+        },
+        {
+          "value": 270,
+          "prefix": "+",
+          "label": "professores da Educação Básica"
+        },
+        {
+          "value": 600,
+          "prefix": "+",
+          "label": "colaboradores"
+        },
+        {
+          "value": 700,
+          "prefix": "+",
+          "label": "kits didáticos distribuídos"
+        },
+        {
+          "value": 10,
+          "label": "laboratórios disponíveis"
+        },
+        {
+          "value": 6,
+          "label": "prêmios"
+        }
+      ],
+      "note": "Dados do programa até 2025."
+    },
+    "history": {
+      "title": "Origens e história",
+      "items": [
+        {
+          "year": "2018",
+          "title": "O primeiro projeto",
+          "points": [
+            "Começam as visitas aos laboratórios",
+            "Objetivo: aproximar a UFMG das escolas",
+            "Ensino Fundamental, Ensino Médio e EJA"
+          ]
+        },
+        {
+          "year": "2020",
+          "title": "O programa cresce",
+          "points": [
+            "6 projetos",
+            "Mais de 2.000 estudantes da Educação Básica",
+            "Mais de 40 professores da Educação Básica"
+          ]
+        },
+        {
+          "year": "2025",
+          "title": "Onde estamos",
+          "points": [
+            "6 prêmios",
+            "Mais de 600 colaboradores",
+            "Mais de 18.000 estudantes",
+            "Mais de 270 professores",
+            "10 laboratórios disponíveis"
+          ]
+        }
+      ]
+    },
+    "activities": {
+      "title": "O que fazemos",
+      "lead": "As atividades se distribuem entre os seis projetos do programa.",
+      "items": [
+        {
+          "title": "Visitas",
+          "text": "Estudantes conhecem os laboratórios do Departamento de Química e fazem experimentos orientados.",
+          "icon": "school"
+        },
+        {
+          "title": "Oficinas",
+          "text": "Experimentos, rodas de conversa e demonstrações em escolas, comunidades e eventos.",
+          "icon": "flask"
+        },
+        {
+          "title": "Recursos didáticos",
+          "text": "Kits, jogos e roteiros de experimentos criados a partir de pesquisas da universidade.",
+          "icon": "box"
+        },
+        {
+          "title": "Conversa com Cientistas",
+          "text": "Encontros em que estudantes conversam com pesquisadores sobre o dia a dia da ciência.",
+          "icon": "chat"
+        },
+        {
+          "title": "Cursos de formação",
+          "text": "Cursos e oficinas formativas para professores da Educação Básica.",
+          "icon": "teacher"
+        },
+        {
+          "title": "Maratona Empreendedora",
+          "text": "Desafios em que estudantes identificam problemas reais e propõem soluções.",
+          "icon": "rocket"
+        }
+      ]
+    },
+    "team": {
+      "title": "Equipe de gestão",
+      "lead": "Coordenação geral, coordenações dos projetos e gestores que fazem o programa acontecer."
+    },
+    "photos": [
+      {
+        "src": "/images/sobre/laboratorio.jpg",
+        "alt": "Estudantes trabalhando em bancadas de laboratório",
+        "width": 1600,
+        "height": 1200
+      },
+      {
+        "src": "/images/sobre/sala-de-aula.jpg",
+        "alt": "Professor e estudantes montam um experimento em sala de aula",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "src": "/images/sobre/experimento.jpg",
+        "alt": "Detalhe de um experimento com luvas e placa de Petri",
+        "width": 1600,
+        "height": 1066
+      }
+    ]
+  },
+  "projetos": {
+    "eyebrow": "Projetos",
+    "title": "Seis projetos, um só objetivo: levar ciência a mais gente.",
+    "lead": "Cada projeto tem identidade, coordenação e um jeito próprio de aproximar a universidade da Educação Básica."
+  },
+  "voluntariado": {
+    "eyebrow": "Voluntariado",
+    "title": "Seja um voluntário do programa",
+    "lead": "Quer levar o acesso à ciência a mais pessoas? Junte-se a estudantes e pesquisadores que fazem o 1000FC acontecer.",
+    "paragraphs": [
+      "Voluntários da graduação, da pós-graduação e da comunidade externa participam das visitas, oficinas, eventos e da produção de materiais didáticos do programa."
+    ],
+    "cta": {
+      "label": "Quero ser voluntário",
+      "href": "https://docs.google.com/forms/d/e/1FAIpQLSfHP9u7MTFNizIS-o0Szq44i5T52hXTahRR6v0N7zBWYozziA/viewform",
+      "external": true
+    },
+    "steps": [
+      {
+        "title": "Inscreva-se",
+        "text": "Preencha o formulário e conte um pouco sobre você."
+      },
+      {
+        "title": "Participe da formação",
+        "text": "A gente te prepara para conduzir experimentos e oficinas."
+      },
+      {
+        "title": "Leve ciência às escolas",
+        "text": "Vá a campo com a equipe e transforme a vida de estudantes."
+      }
+    ],
+    "numbers": {
+      "title": "Quem já faz parte",
+      "items": [
+        {
+          "value": 510,
+          "label": "voluntários"
+        },
+        {
+          "value": 45,
+          "label": "bolsistas"
+        },
+        {
+          "value": 400,
+          "prefix": "+",
+          "label": "da graduação"
+        },
+        {
+          "value": 50,
+          "prefix": "+",
+          "label": "da pós-graduação"
+        },
+        {
+          "value": 120,
+          "prefix": "+",
+          "label": "da comunidade externa"
+        }
+      ]
+    },
+    "photos": [
+      {
+        "src": "/images/voluntariado/equipe-5.jpg",
+        "alt": "Foto oficial com dezenas de colaboradores do 1000FC no campus",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/images/voluntariado/equipe-1.jpg",
+        "alt": "Equipe de voluntários de jaleco no laboratório",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/images/voluntariado/equipe-2.jpg",
+        "alt": "Voluntários do 1000FC reunidos",
+        "width": 1600,
+        "height": 1200
+      },
+      {
+        "src": "/images/voluntariado/equipe-3.jpg",
+        "alt": "Voluntários do 1000FC em um auditório",
+        "width": 1600,
+        "height": 1200
+      },
+      {
+        "src": "/images/voluntariado/equipe-4.jpg",
+        "alt": "Equipe do 1000FC em uma sala de apresentação",
+        "width": 960,
+        "height": 720
+      }
+    ]
+  },
+  "visitas": {
+    "eyebrow": "Para escolas",
+    "title": "Traga sua escola para dentro da universidade.",
+    "lead": "As visitas ao campus são um dos principais serviços do programa, realizadas pelo projeto Experimentando Ciências no DQ.",
+    "paragraphs": [
+      "Os estudantes têm contato com laboratórios de verdade, pesquisadores e experimentos que não cabem na sala de aula, além de conhecer o ambiente universitário.",
+      "As visitas atendem turmas do Ensino Fundamental, do Ensino Médio e da EJA."
+    ],
+    "cta": {
+      "label": "Agendar uma visita",
+      "href": "https://docs.google.com/forms/d/e/1FAIpQLSc2SA3_oewemT1m1c7G5ih2LCfQL-2y2JaiHl9p-cja-55xYA/viewform",
+      "external": true
+    },
+    "howItWorks": {
+      "title": "Como é a visita",
+      "items": [
+        {
+          "title": "Agendamento",
+          "text": "A escola preenche o formulário de agendamento com os dados da turma.",
+          "icon": "calendar"
+        },
+        {
+          "title": "Experimentos orientados",
+          "text": "Os estudantes realizam experimentos nos laboratórios do Departamento de Química.",
+          "icon": "flask"
+        },
+        {
+          "title": "Conversa com Cientistas",
+          "text": "A turma conversa com pesquisadores e conhece o dia a dia da universidade.",
+          "icon": "chat"
+        }
+      ]
+    },
+    "photos": [
+      {
+        "src": "/images/projetos/experimentando/turma-laboratorio.jpg",
+        "alt": "Turma de estudantes de jaleco reunida em um laboratório do Departamento de Química",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/images/projetos/experimentando/lab-estudantes.jpg",
+        "alt": "Duas estudantes fazendo um experimento em bancada de laboratório",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/images/projetos/experimentando/conversa-cientistas.jpg",
+        "alt": "Pesquisadora conversa com estudantes dentro de um laboratório",
+        "width": 1600,
+        "height": 934
+      }
+    ]
+  },
+  "eventos": {
+    "eyebrow": "Agenda",
+    "title": "Eventos",
+    "lead": "Congressos, oficinas e encontros com participação do 1000FC.",
+    "empty": "Nenhum evento programado no momento. As novidades saem primeiro no Instagram @1000futuroscientistas."
+  },
+  "galeria": {
+    "eyebrow": "Galeria",
+    "title": "A ciência acontecendo de verdade.",
+    "lead": "Visitas, oficinas, formações e a equipe do 1000FC em ação."
+  },
+  "contato": {
+    "eyebrow": "Contato",
+    "title": "Fale com o 1000FC",
+    "lead": "Escolas, professores, voluntários e parceiros: escolha o melhor canal.",
+    "channels": [
+      {
+        "title": "E-mail",
+        "text": "1000futuroscientistas@qui.ufmg.br",
+        "link": {
+          "label": "Enviar e-mail",
+          "href": "mailto:1000futuroscientistas@qui.ufmg.br"
+        },
+        "icon": "mail"
+      },
+      {
+        "title": "Agendar uma visita",
+        "text": "Para escolas que querem trazer turmas aos laboratórios.",
+        "link": {
+          "label": "Abrir formulário",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLSc2SA3_oewemT1m1c7G5ih2LCfQL-2y2JaiHl9p-cja-55xYA/viewform",
+          "external": true
+        },
+        "icon": "calendar"
+      },
+      {
+        "title": "Seja voluntário",
+        "text": "Para estudantes e membros da comunidade que querem participar.",
+        "link": {
+          "label": "Abrir formulário",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLSfHP9u7MTFNizIS-o0Szq44i5T52hXTahRR6v0N7zBWYozziA/viewform",
+          "external": true
+        },
+        "icon": "users"
+      },
+      {
+        "title": "Instagram",
+        "text": "@1000futuroscientistas",
+        "link": {
+          "label": "Ver perfil",
+          "href": "https://www.instagram.com/1000futuroscientistas/",
+          "external": true
+        },
+        "icon": "instagram"
+      }
+    ]
+  }
+}

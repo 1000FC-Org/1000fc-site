@@ -21,11 +21,21 @@ export type IconName =
   | "report"
   | "code"
   | "mail"
+  | "users"
+  | "school"
+  | "teacher"
+  | "chat"
+  | "rocket"
+  | "box"
   | "instagram"
   | "facebook"
   | "youtube"
   | "tiktok";
 
+/**
+ * `href` interno começa com "/" (ex.: "/projetos") e é navegado pelo Next.
+ * Qualquer outro valor é tratado como link externo.
+ */
 export interface Link {
   label: string;
   href: string;
@@ -38,6 +48,13 @@ export interface ImageAsset {
   alt: string;
   width: number;
   height: number;
+}
+
+/** Cabeçalho padrão das páginas internas. */
+export interface PageIntro {
+  eyebrow: string;
+  title: string;
+  lead: string;
 }
 
 /* ---------- site.json ---------- */
@@ -62,19 +79,19 @@ export interface SiteContent {
     email: string;
     address: string;
   };
+  /** Formulários externos (Google Forms hoje). */
+  forms: {
+    volunteer: string;
+    visit: string;
+  };
   footer: {
     tagline: string;
-    navTitle: string;
-    nav: Link[];
-    projectsTitle: string;
-    contactTitle: string;
-    cta: Link;
+    /** Sem o ano: o rodapé coloca "© <ano atual>" na frente. */
     legal: string;
-    note?: string;
   };
 }
 
-/* ---------- home.json ---------- */
+/* ---------- home.json (landing) ---------- */
 
 export interface HeroBadge {
   title: string;
@@ -84,6 +101,8 @@ export interface HeroBadge {
 
 export interface Stat {
   value: number;
+  /** Texto antes do número, ex.: "+". */
+  prefix?: string;
   suffix?: string;
   label: string;
 }
@@ -110,13 +129,13 @@ export interface HomeContent {
   };
   about: SectionIntro & {
     text: string;
+    cta: Link;
     pillars: { label: string; icon: IconName }[];
     mission: { label: string; text: string };
   };
   projects: SectionIntro & {
     text: string;
-    /** Card tracejado "+ Novos projetos". Omitir para esconder. */
-    placeholderCard?: { title: string; text: string };
+    cta: Link;
   };
   mapTool: {
     tag: string;
@@ -135,41 +154,82 @@ export interface HomeContent {
     image: ImageAsset;
   };
   events: SectionIntro & {
+    cta: Link;
     note?: string;
   };
   gallery: SectionIntro & {
     cta: Link;
-  };
-  services: SectionIntro & {
-    items: {
-      id: string;
-      icon: IconName;
-      title: string;
-      text: string;
-      cta: Link;
-    }[];
-  };
-  /** Bloco "Proposta · sem código" do mockup. Omitir para esconder. */
-  proposal?: {
-    tag: string;
-    title: string;
-    text: string;
-    chips: string[];
   };
 }
 
 /* ---------- projects.json ---------- */
 
 export interface Project {
+  /** Também é o slug da página: /projetos/{id}. */
   id: string;
+  /** Nome oficial do projeto. */
   name: string;
+  /** Nome curto (cards, rodapé, menus). */
+  shortName: string;
   /** Cor da submarca (decorativa: banner, borda). */
   accent: string;
   /** Variante escura da cor, usada em texto (contraste AA sobre branco). */
   accentInk: string;
   logo: ImageAsset;
+  /** Resumo de uma frase (cards). */
   summary: string;
-  href: string;
+  /** Descrição completa (página do projeto). */
+  description: string[];
+  coordination: string;
+  /** Atividades típicas do projeto. */
+  activities?: string[];
+  /** Chamada específica do projeto (ex.: agendar visita). */
+  cta?: Link;
+  photos: ImageAsset[];
+}
+
+/* ---------- team.json ---------- */
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  /** Sem foto, o card mostra as iniciais. */
+  photo?: Omit<ImageAsset, "alt">;
+}
+
+/* ---------- pages.json (páginas internas) ---------- */
+
+export interface PagesContent {
+  sobre: PageIntro & {
+    paragraphs: string[];
+    mission: { label: string; text: string };
+    numbers: { title: string; items: Stat[]; note?: string };
+    history: { title: string; items: { year: string; title: string; points: string[] }[] };
+    activities: { title: string; lead: string; items: { title: string; text: string; icon: IconName }[] };
+    team: { title: string; lead: string };
+    photos: ImageAsset[];
+  };
+  projetos: PageIntro;
+  voluntariado: PageIntro & {
+    paragraphs: string[];
+    cta: Link;
+    steps: { title: string; text: string }[];
+    numbers: { title: string; items: Stat[] };
+    photos: ImageAsset[];
+  };
+  visitas: PageIntro & {
+    paragraphs: string[];
+    cta: Link;
+    howItWorks: { title: string; items: { title: string; text: string; icon: IconName }[] };
+    note?: string;
+    photos: ImageAsset[];
+  };
+  eventos: PageIntro & { note?: string; empty: string };
+  galeria: PageIntro;
+  contato: PageIntro & {
+    channels: { title: string; text: string; link: Link; icon: IconName }[];
+  };
 }
 
 /* ---------- events.json ---------- */
@@ -193,6 +253,10 @@ export interface GalleryItem {
   alt: string;
   width: number;
   height: number;
-  /** big = 2x2, wide = 2x1, normal = 1x1 (na grade de 4 colunas). */
+  /**
+   * Tamanho na grade da home (4 colunas): big = 2x2, wide = 2x1, normal = 1x1.
+   * A home mostra só os itens com `featured`; a página /galeria mostra todos.
+   */
   size: "big" | "wide" | "normal";
+  featured?: boolean;
 }

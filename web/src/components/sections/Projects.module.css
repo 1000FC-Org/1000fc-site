@@ -9,8 +9,12 @@
 .title {
   max-width: 18ch;
 }
-.intro {
-  max-width: 30ch;
+.headAside {
+  max-width: 34ch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
 }
 .grid {
   display: grid;
@@ -54,6 +58,7 @@
   overflow: hidden;
   background: var(--accent);
   line-height: 0;
+  display: block;
 }
 .banner img {
   width: 100%;
@@ -71,8 +76,29 @@
   color: var(--ink-soft);
   font-size: 0.98rem;
 }
+.cardTitle {
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin-top: 0.15rem;
+}
+.body .coord {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9375rem;
+  color: var(--ink);
+  font-weight: 600;
+  margin-top: 0.1rem;
+}
+.coord span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-ink, var(--green-cta));
+}
 .more {
   margin-top: auto;
+  padding-top: 0.3rem;
   font-family: var(--font-display);
   font-weight: 600;
   color: var(--accent-ink, var(--green-cta));
@@ -86,25 +112,6 @@
 }
 .card:hover .more svg {
   transform: translateX(4px);
-}
-
-.placeholder {
-  --accent: var(--green);
-  justify-content: center;
-  align-items: center;
-  background: rgba(105, 188, 69, 0.08);
-  border-style: dashed;
-}
-.placeholder .body {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-.placeholderTitle {
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: var(--green-700);
-  font-size: 1.15rem;
 }
 
 /* Mapa da Mineração */

@@ -8,6 +8,7 @@ const format = (v: number) => (v >= 1000 ? fmt.format(v) : String(v));
 
 type Props = {
   value: number;
+  prefix?: string;
   suffix?: string;
   className?: string;
   suffixClassName?: string;
@@ -16,12 +17,12 @@ type Props = {
 /**
  * Número que "conta" de 0 até `value` quando aparece na tela.
  *
- * Diferente do mockup, o HTML do servidor já sai com o valor final
+ * O HTML do servidor já sai com o valor final
  * (bom para SEO, leitores de tela e quem está sem JS). Só depois de
  * hidratar, e se o número ainda estiver fora da tela, ele volta a 0
  * para animar quando for visto.
  */
-export function CountUp({ value, suffix = "", className, suffixClassName }: Props) {
+export function CountUp({ value, prefix = "", suffix = "", className, suffixClassName }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const reduceMotion = usePrefersReducedMotion();
   const [display, setDisplay] = useState<{ n: number; done: boolean }>({ n: value, done: true });
@@ -64,6 +65,7 @@ export function CountUp({ value, suffix = "", className, suffixClassName }: Prop
 
   return (
     <div ref={ref} className={className}>
+      {prefix}
       {format(display.n)}
       {display.done && suffix ? <span className={suffixClassName}>{suffix}</span> : null}
     </div>

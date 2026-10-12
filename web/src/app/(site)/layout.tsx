@@ -1,27 +1,26 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { getHome, getProjects, getSite } from "@/lib/content";
+import { getEvents, getSite } from "@/lib/content";
 
 /**
  * Layout das páginas públicas. O grupo `(site)` não aparece na URL; ele só
- * separa o site público de áreas futuras como `(admin)` (painel com login),
- * que terão layout, header e regras de acesso próprios.
+ * separa o site público de áreas futuras como `(admin)` (painel com login).
  */
 export default async function SiteLayout({ children }: LayoutProps<"/">) {
-  const [site, projects, home] = await Promise.all([getSite(), getProjects(), getHome()]);
+  const [site, events] = await Promise.all([getSite(), getEvents()]);
+  // Sem eventos cadastrados, "Eventos" sai do menu (a página continua existindo).
+  const nav = events.length ? site.nav : site.nav.filter((item) => item.href !== "/eventos");
 
   return (
     <>
       <a href="#main" className="skip">
         Pular para o conteúdo
       </a>
-      <Header logo={site.logo} nav={site.nav} headerCta={site.headerCta} />
-      <main>{children}</main>
-      <Footer
-        site={site}
-        projects={projects}
-        extraProjectLinks={[{ label: home.mapTool.title, href: "#projetos" }]}
-      />
+      <Header logo={site.logo} nav={nav} headerCta={site.headerCta} />
+      <main id="main" tabIndex={-1}>
+        {children}
+      </main>
+      <Footer site={site} />
     </>
   );
 }

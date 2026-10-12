@@ -1,8 +1,216 @@
 [
-  { "id": "foto-03", "src": "/images/photos/foto-03.jpg", "alt": "Estudantes em atividade prática de ciências", "width": 1000, "height": 500, "size": "big" },
-  { "id": "foto-01", "src": "/images/photos/foto-01.jpg", "alt": "Alunos visitando um laboratório da UFMG", "width": 1024, "height": 683, "size": "normal" },
-  { "id": "foto-04", "src": "/images/photos/foto-04.jpg", "alt": "Oficina científica com estudantes", "width": 1000, "height": 500, "size": "normal" },
-  { "id": "foto-05", "src": "/images/photos/foto-05.jpg", "alt": "Experimento em laboratório de química", "width": 1000, "height": 500, "size": "wide" },
-  { "id": "foto-06", "src": "/images/photos/foto-06.jpg", "alt": "Turma em visita ao campus da universidade", "width": 1000, "height": 500, "size": "wide" },
-  { "id": "foto-02", "src": "/images/photos/foto-02.jpeg", "alt": "Grupo de estudantes do programa 1000FC", "width": 1000, "height": 500, "size": "wide" }
+  {
+    "id": "foto-03",
+    "src": "/images/photos/foto-03.jpg",
+    "alt": "Estudantes em atividade prática de ciências",
+    "width": 1000,
+    "height": 500,
+    "size": "big",
+    "featured": true
+  },
+  {
+    "id": "foto-01",
+    "src": "/images/photos/foto-01.jpg",
+    "alt": "Alunos visitando um laboratório da UFMG",
+    "width": 1024,
+    "height": 683,
+    "size": "normal",
+    "featured": true
+  },
+  {
+    "id": "foto-04",
+    "src": "/images/photos/foto-04.jpg",
+    "alt": "Oficina científica com estudantes",
+    "width": 1000,
+    "height": 500,
+    "size": "normal",
+    "featured": true
+  },
+  {
+    "id": "foto-05",
+    "src": "/images/photos/foto-05.jpg",
+    "alt": "Experimento em laboratório de química",
+    "width": 1000,
+    "height": 500,
+    "size": "wide",
+    "featured": true
+  },
+  {
+    "id": "foto-06",
+    "src": "/images/photos/foto-06.jpg",
+    "alt": "Turma em visita ao campus da universidade",
+    "width": 1000,
+    "height": 500,
+    "size": "wide",
+    "featured": true
+  },
+  {
+    "id": "foto-02",
+    "src": "/images/photos/foto-02.jpeg",
+    "alt": "Grupo de estudantes do programa 1000FC",
+    "width": 1000,
+    "height": 500,
+    "size": "wide",
+    "featured": true
+  },
+  {
+    "id": "projetos-experimentando-lab-estudantes",
+    "src": "/images/projetos/experimentando/lab-estudantes.jpg",
+    "alt": "Duas estudantes fazendo um experimento em bancada de laboratório",
+    "width": 1600,
+    "height": 1067,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-experimentando-turma-laboratorio",
+    "src": "/images/projetos/experimentando/turma-laboratorio.jpg",
+    "alt": "Turma de estudantes de jaleco reunida em um laboratório do Departamento de Química",
+    "width": 1600,
+    "height": 1067,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-experimentando-conversa-cientistas",
+    "src": "/images/projetos/experimentando/conversa-cientistas.jpg",
+    "alt": "Pesquisadora conversa com estudantes dentro de um laboratório",
+    "width": 1600,
+    "height": 934,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-experimentando-auditorio",
+    "src": "/images/projetos/experimentando/auditorio.jpg",
+    "alt": "Estudantes da educação básica em um auditório da UFMG",
+    "width": 1600,
+    "height": 1200,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-pelo-mundo-oficina-externa",
+    "src": "/images/projetos/pelo-mundo/oficina-externa.jpg",
+    "alt": "Monitor apresenta um experimento para estudantes em uma oficina fora da UFMG",
+    "width": 1600,
+    "height": 1067,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-pelo-mundo-bafo-de-onca",
+    "src": "/images/projetos/pelo-mundo/bafo-de-onca.jpg",
+    "alt": "Estudantes de jaleco em uma escola com o experimento Bafo de Onça",
+    "width": 1600,
+    "height": 1066,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-inspirati-kit",
+    "src": "/images/projetos/inspirati/kit.jpg",
+    "alt": "Kit didático do 1000FC com reagentes, luvas e roteiro",
+    "width": 1024,
+    "height": 834,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-inspirati-jogo",
+    "src": "/images/projetos/inspirati/jogo.jpg",
+    "alt": "Kit com frascos de reagentes e tabuleiro de jogo didático",
+    "width": 1600,
+    "height": 1274,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-inspirati-gravacao",
+    "src": "/images/projetos/inspirati/gravacao.jpg",
+    "alt": "Gravação de vídeo de um experimento para os kits didáticos",
+    "width": 1197,
+    "height": 1600,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-empreendedorismo-maratona-plateia",
+    "src": "/images/projetos/empreendedorismo/maratona-plateia.jpg",
+    "alt": "Plateia lotada na Maratona Empreendedora",
+    "width": 1600,
+    "height": 1067,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-empreendedorismo-maratona-premiacao",
+    "src": "/images/projetos/empreendedorismo/maratona-premiacao.jpg",
+    "alt": "Premiação da Maratona Empreendedora",
+    "width": 1080,
+    "height": 1080,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-casa-do-professor-encontro",
+    "src": "/images/projetos/casa-do-professor/encontro.jpg",
+    "alt": "Professores reunidos na Casa do Professor",
+    "width": 1600,
+    "height": 1200,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-casa-do-professor-espaco",
+    "src": "/images/projetos/casa-do-professor/espaco.jpg",
+    "alt": "Entrada da Casa do Professor, com portas laranja e o símbolo do projeto",
+    "width": 1019,
+    "height": 1280,
+    "size": "normal"
+  },
+  {
+    "id": "sobre-laboratorio",
+    "src": "/images/sobre/laboratorio.jpg",
+    "alt": "Estudantes trabalhando em bancadas de laboratório",
+    "width": 1600,
+    "height": 1200,
+    "size": "normal"
+  },
+  {
+    "id": "sobre-sala-de-aula",
+    "src": "/images/sobre/sala-de-aula.jpg",
+    "alt": "Professor e estudantes montam um experimento em sala de aula",
+    "width": 1536,
+    "height": 1024,
+    "size": "normal"
+  },
+  {
+    "id": "sobre-experimento",
+    "src": "/images/sobre/experimento.jpg",
+    "alt": "Detalhe de um experimento com luvas e placa de Petri",
+    "width": 1600,
+    "height": 1066,
+    "size": "normal"
+  },
+  {
+    "id": "voluntariado-equipe-5",
+    "src": "/images/voluntariado/equipe-5.jpg",
+    "alt": "Foto oficial com dezenas de colaboradores do 1000FC no campus",
+    "width": 1600,
+    "height": 1067,
+    "size": "normal"
+  },
+  {
+    "id": "voluntariado-equipe-2",
+    "src": "/images/voluntariado/equipe-2.jpg",
+    "alt": "Voluntários do 1000FC reunidos",
+    "width": 1600,
+    "height": 1200,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-experimentando-patio",
+    "src": "/images/projetos/experimentando/patio.jpg",
+    "alt": "Grupo grande de estudantes em visita ao campus, sentados no pátio",
+    "width": 1152,
+    "height": 864,
+    "size": "normal"
+  },
+  {
+    "id": "projetos-pelo-mundo-criancas-computador",
+    "src": "/images/projetos/pelo-mundo/criancas-computador.jpg",
+    "alt": "Crianças acompanham uma atividade de divulgação científica ao ar livre",
+    "width": 1600,
+    "height": 1200,
+    "size": "normal"
+  }
 ]

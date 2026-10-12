@@ -1,0 +1,112 @@
+[
+  {
+    "id": "janaina",
+    "name": "Janaína de Paula e Silva",
+    "role": "TAE · Coordenadora geral do programa e do 1000FC Pelo Mundo",
+    "photo": {
+      "src": "/images/equipe/janaina.jpg",
+      "width": 480,
+      "height": 480
+    }
+  },
+  {
+    "id": "isabela",
+    "name": "Isabela Toledo Lima",
+    "role": "TAE · Coordenadora do Experimentando Ciências no DQ",
+    "photo": {
+      "src": "/images/equipe/isabela.jpg",
+      "width": 480,
+      "height": 480
+    }
+  },
+  {
+    "id": "ana-paula",
+    "name": "Ana Paula de Carvalho Teixeira",
+    "role": "Professora · Coordenadora do Inspirati",
+    "photo": {
+      "src": "/images/equipe/ana-paula.jpg",
+      "width": 480,
+      "height": 480
+    }
+  },
+  {
+    "id": "wladmir",
+    "name": "Wladmir Teodoro da Silva",
+    "role": "TAE · Coordenador do Hialotecnia, Arte e Sustentabilidade",
+    "photo": {
+      "src": "/images/equipe/wladmir.jpg",
+      "width": 480,
+      "height": 480
+    }
+  },
+  {
+    "id": "rochel",
+    "name": "Rochel Montero Lago",
+    "role": "Professor · Coordenador do Empreendedorismo na Educação Básica",
+    "photo": {
+      "src": "/images/equipe/rochel.jpg",
+      "width": 480,
+      "height": 480
+    }
+  },
+  {
+    "id": "rita",
+    "name": "Rita de Cássia Oliveira Sebastião",
+    "role": "Professora · Coordenadora d'A Casa do Professor",
+    "photo": {
+      "src": "/images/equipe/rita.jpg",
+      "width": 480,
+      "height": 480
+    }
+  },
+  {
+    "id": "juliana",
+    "name": "Juliana",
+    "role": "TAE · Gestão",
+    "photo": {
+      "src": "/images/equipe/juliana.jpg",
+      "width": 480,
+      "height": 480
+    }
+  },
+  {
+    "id": "cecilia",
+    "name": "Cecília",
+    "role": "Graduação · Gestão",
+    "photo": {
+      "src": "/images/equipe/cecilia.jpg",
+      "width": 480,
+      "height": 480
+    }
+  },
+  {
+    "id": "natalia",
+    "name": "Natália Araújo",
+    "role": "Pós-graduação · Gestão",
+    "photo": {
+      "src": "/images/equipe/natalia.jpg",
+      "width": 480,
+      "height": 480
+    }
+  },
+  {
+    "id": "raphaela",
+    "name": "Raphaela",
+    "role": "Pós-graduação · Gestão",
+    "photo": {
+      "src": "/images/equipe/raphaela.jpg",
+      "width": 480,
+      "height": 480
+    }
+  },
+  {
+    "id": "everaldo",
+    "name": "Everaldo",
+    "role": "Gestão"
+  },
+  {
+    "id": "enzo",
+    "name": "Enzo",
+    "role": "Gestão"
+  }
+]

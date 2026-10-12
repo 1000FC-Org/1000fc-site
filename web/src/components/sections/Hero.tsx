@@ -3,12 +3,13 @@ import type { HomeContent } from "@/lib/types";
 import { FlaskMini, Icon } from "@/components/ui/Icon";
 import styles from "./Hero.module.css";
 import { asset } from "@/lib/asset";
+import { SmartLink } from "@/components/ui/SmartLink";
 
 export function Hero({ hero }: { hero: HomeContent["hero"] }) {
   const [badgeTop, badgeBottom] = hero.badges;
 
   return (
-    <section className={styles.hero} id="main">
+    <section className={styles.hero}>
       <div className={`wrap ${styles.grid}`}>
         <div>
           <span className="eyebrow">{hero.eyebrow}</span>
@@ -19,13 +20,13 @@ export function Hero({ hero }: { hero: HomeContent["hero"] }) {
           </h1>
           <p className={styles.lead}>{hero.lead}</p>
           <div className={styles.ctas}>
-            <a href={hero.primaryCta.href} className="btn btn-primary">
+            <SmartLink href={hero.primaryCta.href} className="btn btn-primary">
               {hero.primaryCta.label}
               <Icon name="arrow-right" />
-            </a>
-            <a href={hero.secondaryCta.href} className="btn btn-ghost">
+            </SmartLink>
+            <SmartLink href={hero.secondaryCta.href} className="btn btn-ghost">
               {hero.secondaryCta.label}
-            </a>
+            </SmartLink>
           </div>
           <div className={styles.trust}>
             {hero.trust.map((t) => (

@@ -46,6 +46,21 @@
   border-radius: 100px;
   margin-bottom: 0.9rem;
 }
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--green-cta);
+}
+.more svg {
+  transition: transform 0.25s;
+}
+.more:hover svg {
+  transform: translateX(4px);
+}
 .pillars {
   display: flex;
   gap: 0.7rem;

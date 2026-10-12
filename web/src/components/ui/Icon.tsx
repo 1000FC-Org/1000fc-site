@@ -2,7 +2,7 @@ import type { SVGProps } from "react";
 import type { IconName } from "@/lib/types";
 
 /**
- * Ícones do site (mesmos traços do mockup). O conteúdo em JSON referencia
+ * Ícones do site. O conteúdo em JSON referencia
  * ícones pelo nome, então quem editar pelo painel escolhe de uma lista.
  */
 
@@ -98,6 +98,50 @@ export function Icon({ name, ...props }: Props) {
       return (
         <svg {...common} {...stroke} strokeWidth={props.strokeWidth ?? 2}>
           <path d="m9 8-4 4 4 4M15 8l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+    case "users":
+      return (
+        <svg {...common} {...stroke} strokeWidth={props.strokeWidth ?? 2}>
+          <circle cx="9" cy="8" r="3.2" />
+          <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" strokeLinecap="round" />
+          <path d="M16 4.6a3.2 3.2 0 0 1 0 6.3M18 14.3c1.8.8 3 2.7 3 5.7" strokeLinecap="round" />
+        </svg>
+      );
+    case "school":
+      return (
+        <svg {...common} {...stroke} strokeWidth={props.strokeWidth ?? 2}>
+          <path d="M3 9.5 12 5l9 4.5-9 4.5-9-4.5Z" strokeLinejoin="round" />
+          <path d="M7 11.6V16c0 1.4 2.2 3 5 3s5-1.6 5-3v-4.4M21 9.5V15" strokeLinecap="round" />
+        </svg>
+      );
+    case "teacher":
+      return (
+        <svg {...common} {...stroke} strokeWidth={props.strokeWidth ?? 2}>
+          <rect x="3" y="4" width="18" height="11" rx="1.5" />
+          <path d="M8 20l2-5M16 20l-2-5M7 8.5h6M7 11.5h4" strokeLinecap="round" />
+        </svg>
+      );
+    case "chat":
+      return (
+        <svg {...common} {...stroke} strokeWidth={props.strokeWidth ?? 2}>
+          <path d="M4 5h16v10H9l-5 4V5Z" strokeLinejoin="round" />
+          <path d="M8 9h8M8 12h5" strokeLinecap="round" />
+        </svg>
+      );
+    case "rocket":
+      return (
+        <svg {...common} {...stroke} strokeWidth={props.strokeWidth ?? 2}>
+          <path d="M14 4c3 0 6 1 6 1s1 3 1 6c0 4-4 7-7 8l-4-4c1-3 4-11 4-11Z" strokeLinejoin="round" />
+          <circle cx="15.5" cy="8.5" r="1.6" />
+          <path d="M9 15c-2 0-4 2-4 5 3 0 5-2 5-4M10 12H6l-2 3h4M12 14v4l-3 2v-4" strokeLinejoin="round" />
+        </svg>
+      );
+    case "box":
+      return (
+        <svg {...common} {...stroke} strokeWidth={props.strokeWidth ?? 2}>
+          <path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9Z" strokeLinejoin="round" />
+          <path d="M3 7.5 12 12l9-4.5M12 12v9" strokeLinejoin="round" />
         </svg>
       );
     case "mail":

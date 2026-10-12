@@ -58,6 +58,10 @@
   color: var(--green-700);
   background: rgba(105, 188, 69, 0.1);
 }
+.links a.active {
+  color: var(--green-700);
+  background: rgba(105, 188, 69, 0.14);
+}
 .cta {
   display: flex;
   align-items: center;

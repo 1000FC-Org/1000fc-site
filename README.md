@@ -35,7 +35,7 @@ Publicação manual via GitHub Actions.
 2. Para publicar: **Actions → Deploy to GitHub Pages → Run workflow** (branch `main`).
 3. O site sai em `https://1000fc-org.github.io/1000fc-site/`.
 
-O workflow (`.github/workflows/deploy.yml`) faz o build com `STATIC_EXPORT=true`, que liga o modo estático do Next (`output: "export"`, imagens sem otimização e `basePath` com o subcaminho do Pages). O subcaminho e a URL pública vêm do próprio `actions/configure-pages`, então nada fica fixo no código.
+O workflow (`.github/workflows/deploy.yml`) faz o build com `STATIC_EXPORT=true`, que liga o modo estático do Next (`output: "export"`, imagens sem otimização, `trailingSlash` para gerar `sobre/index.html` e `basePath` com o subcaminho do Pages). O subcaminho e a URL pública vêm do próprio `actions/configure-pages`, então nada fica fixo no código.
 
 Para testar esse modo localmente:
 
@@ -45,7 +45,7 @@ STATIC_EXPORT=true PAGES_BASE_PATH=/1000fc-site npm run build
 # o resultado fica em web/out/
 ```
 
-Caminhos de arquivos em `public/` usados como texto (os `src` dos JSONs) passam por `asset()` (`src/lib/asset.ts`), que coloca o prefixo do subcaminho. Ao adicionar uma imagem nova em um componente, use `src={asset(...)}`.
+Caminhos de arquivos em `public/` usados como texto (os `src` dos JSONs) passam por `asset()` (`src/lib/asset.ts`), que coloca o prefixo do subcaminho. Ao adicionar uma imagem nova em um componente, use `src={asset(...)}`. Links internos vindos dos JSONs (`"/sobre"`, `"/projetos/inspirati"`) passam por `SmartLink`, que usa o `next/link` e também recebe o prefixo.
 
 O modo padrão (sem `STATIC_EXPORT`) continua sendo o de servidor Node/Vercel, que é o que o site vai precisar quando tiver login e painel.
 
@@ -56,45 +56,70 @@ O modo padrão (sem `STATIC_EXPORT`) continua sendo o de servidor Node/Vercel, q
 - **next/image** para as fotos e logos (redimensiona, gera webp/avif e evita salto de layout)
 - Fontes auto-hospedadas via `@fontsource` (nenhuma chamada ao Google Fonts)
 
+## Páginas
+
+| Rota | Conteúdo |
+| --- | --- |
+| `/` | Landing (vitrine): um resumo de cada página, com links para elas |
+| `/sobre` | Descrição do programa, missão, números, história, atividades e equipe de gestão (`/sobre#equipe`) |
+| `/projetos` | Os seis projetos, com coordenação |
+| `/projetos/[id]` | Página de cada projeto: descrição, coordenação, atividades e fotos |
+| `/voluntariado` | Como participar, números de colaboradores e link para o formulário |
+| `/visitas` | Visitas de escolas ao DQ e link para o formulário de agendamento |
+| `/eventos` | Agenda |
+| `/galeria` | Todas as fotos, com lightbox (← → navegam) |
+| `/contato` | Canais de contato |
+
 ## Estrutura
 
 ```
 web/
   src/
     app/
-      layout.tsx            # raiz: fontes, CSS global, metadata (SEO/Open Graph)
+      layout.tsx            # raiz: fontes, CSS global, metadata (título de cada página: "Página · 1000 Futuros Cientistas")
       icon.png              # favicon (símbolo dos "zeros-sorriso")
       (site)/               # site público (o grupo não aparece na URL)
-        layout.tsx          # skip link + Header + Footer
-        page.tsx            # home: busca o conteúdo e monta as seções
+        layout.tsx          # skip link + Header + <main> + Footer (rodapé só com marca, redes e contato)
+        page.tsx            # landing
+        sobre/ projetos/ projetos/[slug]/ voluntariado/ visitas/ eventos/ galeria/ contato/
+        pages.module.css    # peças pequenas compartilhadas pelas páginas internas
     components/
-      layout/               # Header (client), Footer
-      sections/             # Hero, Stats, About, Projects, Volunteer, Visit,
-                            # Events, Gallery (client), Services, Proposal
-      ui/                   # Icon, Reveal, CountUp
+      layout/               # Header (client, marca a página ativa), Footer
+      sections/             # seções da landing: Hero, Stats, About, Projects, Volunteer,
+                            # Visit, Events, Gallery
+      blocks/               # blocos das páginas internas: PageHeader, SectionHead, SplitText,
+                            # FeatureGrid, Timeline, TeamGrid
+      ui/                   # Icon, Reveal, CountUp, SmartLink, PhotoGallery (client, com lightbox)
     hooks/                  # useInView, useScrolled, usePrefersReducedMotion
     data/                   # conteúdo do site em JSON (fonte de verdade por enquanto)
-      site.json             # nome, logo, menu, redes sociais, contato, rodapé
-      home.json             # textos de cada seção da home
-      projects.json         # os cinco projetos (cor, logo, resumo, link)
+      site.json             # nome, logo, menu, redes sociais, contato, formulários, rodapé
+      home.json             # textos de cada seção da landing
+      pages.json            # textos das páginas internas (sobre, voluntariado, visitas...)
+      projects.json         # os seis projetos (nome, cores, logo, descrição, coordenação, fotos)
+      team.json             # equipe de gestão
       events.json           # eventos
-      gallery.json          # fotos da galeria
+      gallery.json          # fotos da galeria (featured = aparece no mosaico da landing)
     lib/
       types.ts              # tipos de todo o conteúdo
-      content.ts            # única porta de acesso aos dados (getSite, getHome...)
+      content.ts            # única porta de acesso aos dados (getSite, getPages, getProject...)
       asset.ts              # prefixa caminhos de public/ com o basePath (GitHub Pages)
   public/
     images/logos/           # logo principal e submarcas
-    images/photos/          # fotos
+    images/photos/          # fotos do mockup original
+    images/projetos/<id>/   # fotos de cada projeto
+    images/equipe/          # retratos da equipe (480x480)
+    images/sobre/ images/voluntariado/
 ```
+
+As fotos novas vieram da apresentação institucional (`apresentação_institucional_novas_parcerias.pptx`), redimensionadas para no máximo 1600 px e comprimidas em JPEG (de ~220 MB no arquivo original para ~8 MB no site). O banner da Casa do Professor foi montado a partir do logo do slide de projetos, no mesmo formato dos outros.
 
 ## Decisões de arquitetura
 
 **Conteúdo fora do código.** Nenhum texto, link, cor de submarca ou foto está escrito nos componentes; tudo vem de `src/data/*.json` e é tipado em `src/lib/types.ts`. Os componentes só recebem props.
 
-**Uma porta única para os dados.** Páginas e layouts nunca importam os JSONs direto: chamam `getSite()`, `getHome()`, `getProjects()`, `getEvents()` e `getGallery()` de `src/lib/content.ts`. As funções já são `async` e marcadas como `server-only`. Quando o conteúdo passar para um banco ou CMS, muda só o corpo delas.
+**Uma porta única para os dados.** Páginas e layouts nunca importam os JSONs direto: chamam `getSite()`, `getHome()`, `getPages()`, `getProjects()`, `getProject(id)`, `getTeam()`, `getEvents()` e `getGallery()` de `src/lib/content.ts`. As funções já são `async` e marcadas como `server-only`. Quando o conteúdo passar para um banco ou CMS, muda só o corpo delas.
 
-**Servidor por padrão, cliente só onde precisa.** As seções são Server Components (HTML pronto, zero JS). Só rodam no navegador: o Header (menu mobile e sombra no scroll), a Galeria (lightbox), o `Reveal` (animação de entrada) e o `CountUp` (contador). O `Reveal` só embrulha o conteúdo, que continua sendo renderizado no servidor.
+**Servidor por padrão, cliente só onde precisa.** As seções são Server Components (HTML pronto, zero JS). Só rodam no navegador: o Header (menu mobile, página ativa e sombra no scroll), o `PhotoGallery` (lightbox), o `Reveal` (animação de entrada) e o `CountUp` (contador). O `Reveal` só embrulha o conteúdo, que continua sendo renderizado no servidor.
 
 **Espaço para o painel.** O site público fica no grupo de rotas `app/(site)`. O painel de edição entra como `app/(admin)`, com layout e regras de acesso próprios, sem mexer no site.
 
@@ -102,9 +127,11 @@ web/
 
 Editar o JSON correspondente em `web/src/data/` e rodar o build. Exemplos:
 
-- **Adicionar um projeto:** nova entrada em `projects.json` (id, nome, cores, logo, resumo, link) e o logo em `public/images/logos/`. O card e o link no rodapé aparecem sozinhos.
+- **Adicionar um projeto:** nova entrada em `projects.json` (id, nome, cores, logo, resumo, descrição, coordenação, fotos) e o logo em `public/images/logos/`. O card e a página `/projetos/<id>` aparecem sozinhos.
+- **Equipe:** `team.json`. Sem `photo`, o card mostra as iniciais.
+- **Textos das páginas internas:** `pages.json`.
 - **Trocar o evento:** editar `events.json`. Dá para ter vários; eles empilham.
-- **Esconder o card "+ Novos projetos" ou o bloco "Proposta · sem código":** remover `projects.placeholderCard` ou `proposal` de `home.json`.
+- **Eventos:** com `events.json` vazio, a seção some da landing e "Eventos" sai do menu; a página `/eventos` mostra um aviso. Basta cadastrar um evento para tudo voltar.
 - **Ícones:** os campos `icon` aceitam os nomes listados em `IconName` (`src/lib/types.ts`).
 
 ## Próximos passos: login e edição
@@ -130,11 +157,21 @@ A experiência visual é a mesma. Mudanças pontuais:
 - "Abrir o mapa" aponta para o Mineração MG publicado.
 - Itens da galeria são `<button>` de verdade e os passos do voluntariado são uma lista ordenada.
 
-## Pendências herdadas do mockup
+## Pendências
 
-- **Placeholders:** números das estatísticas, evento (IV Congresso "Set/2025, a confirmar" já passou) e todos os links `#` (voluntário, visitas, certificados, relatórios, "Saiba mais", "Ver todas as fotos").
-- **Texto:** o Sobre fala em "Instituto de Química"; na UFMG é o Departamento de Química do ICEx.
+Conteúdo:
+
+- **Equipe:** faltam foto e função de Everaldo e Enzo (aparecem com as iniciais) e os sobrenomes de Juliana, Cecília e Raphaela.
+- **Hialotecnia:** não há fotos do projeto na apresentação; a página mostra só o logo e o texto.
+- **Eventos:** não há nenhum cadastrado (o evento ilustrativo do mockup foi removido).
+- **História:** a apresentação diz "6 projetos" em 2020, mas A Casa do Professor foi vinculada em 2024. Vale confirmar o marco de 2020.
+- **Certificados e relatórios:** a seção "Autoatendimento" do mockup foi retirada até existir emissão de certificados e relatórios de verdade.
+- **Não aproveitado da apresentação:** logos de parceiros (slide 22), vídeos de depoimentos e as fotos dos kits da marca qit (slides 23 e 24), por não estar claro a qual projeto pertencem.
+
+Marca e direitos:
+
 - **Fontes oficiais:** Intervogue Soft Black e Mundial são pagas. Quando licenciadas, carregar com `next/font/local` e trocar `--font-display` e `--font-body` em `globals.css`.
 - **Cor da submarca Pelo Mundo:** teal `#02A896` (usado) ou azul `#3840A0`, a confirmar com o designer.
+- **Cor da Casa do Professor:** `#EE8F1B`, tirada do logo; confirmar com o designer.
 - **Logo da UFMG / DQ** para uma faixa "Realização".
-- **Direitos de uso das fotos** (vieram do site atual).
+- **Direitos de uso das fotos** (site atual e apresentação institucional), principalmente as de estudantes.

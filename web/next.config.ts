@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
   ...(isStaticExport && {
     output: "export",
     images: { unoptimized: true },
+    // Gera /sobre/index.html em vez de /sobre.html: funciona em qualquer host estático.
+    trailingSlash: true,
   }),
 };
 

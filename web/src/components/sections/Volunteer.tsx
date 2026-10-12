@@ -2,8 +2,11 @@ import type { HomeContent } from "@/lib/types";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import styles from "./Volunteer.module.css";
+import { SmartLink } from "@/components/ui/SmartLink";
 
 export function Volunteer({ volunteer }: { volunteer: HomeContent["volunteer"] }) {
+  const isExternal = volunteer.cta.external ?? /^https?:\/\//.test(volunteer.cta.href);
+
   return (
     <section className="section" id="voluntariado" style={{ paddingTop: 0 }}>
       <Reveal className="wrap">
@@ -15,10 +18,10 @@ export function Volunteer({ volunteer }: { volunteer: HomeContent["volunteer"] }
               </span>
               <h2 className={styles.title}>{volunteer.title}</h2>
               <p className={styles.text}>{volunteer.text}</p>
-              <a href={volunteer.cta.href} className="btn btn-light">
+              <SmartLink href={volunteer.cta.href} external={volunteer.cta.external} className="btn btn-light">
                 {volunteer.cta.label}
-                <Icon name="arrow-right" width={18} height={18} />
-              </a>
+                <Icon name={isExternal ? "arrow-up-right" : "arrow-right"} width={18} height={18} />
+              </SmartLink>
             </div>
             <ol className={styles.steps}>
               {volunteer.steps.map((step, i) => (
